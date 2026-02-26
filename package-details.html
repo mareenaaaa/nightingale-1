@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Details | Nightingale Holidays</title>
+    <meta name="description"
+        content="View comprehensive details, itineraries, and inclusions for our luxury travel packages.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        .details-hero {
+            position: relative;
+            padding-top: 150px;
+            padding-bottom: 80px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(14, 21, 17, 1) 0%, rgba(14, 21, 17, 0) 100%);
+        }
+
+        .details-img-container {
+            width: 100%;
+            height: 60vh;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .details-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            padding-bottom: 80px;
+        }
+
+        .sidebar-booking {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            position: sticky;
+            top: 120px;
+            backdrop-filter: blur(10px);
+        }
+
+        .sidebar-price {
+            font-size: 2rem;
+            color: #ffcc33;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .info-pill {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .info-pill i {
+            color: #ffcc33;
+            width: 25px;
+            text-align: center;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h3 {
+            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+            color: #ffcc33;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .overview-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .itinerary-day {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid #ffcc33;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 0 15px 15px 0;
+            transition: 0.3s;
+        }
+
+        .itinerary-day:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(5px);
+        }
+
+        .itinerary-day h4 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 8px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .itinerary-day p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+        }
+
+        .incl-excl-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .incl-box h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .incl-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .incl-box ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .incl-box.yes ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        .incl-box.no ul li::before {
+            content: '\f00d';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #f44336;
+        }
+
+        .share-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .share-row a {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .share-row a:hover {
+            background: #ffcc33;
+            color: #050505;
+        }
+
+        @media (max-width: 968px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar-booking {
+                position: static;
+                margin-bottom: 50px;
+            }
+
+            .incl-excl-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="scrolled">
+        <div class="container">
+            <div class="logo">Nightingale Holidays</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#packages">Packages</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#destinations">Travels</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/919048099499" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="package-main-content">
+        <div class="container" style="text-align: center; padding: 200px 0;">
+            <h2>Loading Package Details...</h2>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <h3>Nightingale Holidays</h3>
+                    <p>Curating extraordinary journeys and redefining luxury travel since 2011.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/919048099499" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Navigation -->
+                <div class="footer-info">
+                    <h4>Collections</h4>
+                    <p><a href="index.html#home">Home</a></p>
+                    <p><a href="index.html#about">Our Story</a></p>
+                    <p><a href="index.html#destinations">Worldwide</a></p>
+                    <p><a href="index.html#packages">Tour Packages</a></p>
+                </div>
+                <!-- Col 3: Offices -->
+                <div class="footer-info">
+                    <h4>Our Offices</h4>
+                    <p><strong>Calicut:</strong> Mankavu, Kozhikode</p>
+                    <p><strong>Kannur:</strong> Mattanur, Kannur</p>
+                    <p><strong>Operational:</strong> 24/7 Concierge</p>
+                </div>
+                <!-- Col 4: Contact -->
+                <div class="footer-info">
+                    <h4>Direct Contact</h4>
+                    <p>+91 9847068334</p>
+                    <p>+91 9048099499</p>
+                    <p>info@nightingaleholidays.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nightingale Holidays. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const packageId = urlParams.get('id');
+
+            // Copy metadata from index.html (or database)
+            const images = {
+                munnar: 'pine.jpg',
+                munnar_alleppey: 'alapuzha.jpg',
+                honeymoon: 'kerala honeymoon.jpg',
+                south_india: 'palani.jpg',
+                mookambika: 'mookambika.jpg',
+                nalambalam: 'Guruvayoor/guruvayur-temple.jpg',
+                hyderabad: 'hyderabad.jpg',
+                mysore: 'mysore.jpg',
+                ooty: 'ooty.jpg',
+                kodaikanal: 'kodai.jpg',
+                navagraha: 'navagraha.jpg',
+                trivandrum: 'thiruvanthapuram.jpg',
+                wayanad: 'wayanad.jpg',
+                guruvayoor: 'Guruvayoor/guruvayur-temple.jpg',
+                kannur: 'Kannur Temple Visit/mridanga saileswari.jpg'
+            };
+
+            const descriptions = {
+                munnar: 'Discover the sprawling tea plantations and mist-covered hills of Munnar.',
+                munnar_alleppey: 'The perfect blend of mist-covered hills and serene backwater houseboats.',
+                honeymoon: 'A romantic escapade featuring private pool villas and intimate beach dinners.',
+                south_india: 'Explore the spiritual grandeur of Palani, Madurai, and Rameshwaram.',
+                mookambika: 'A soul-enriching journey through the most sacred temples of Karnataka.',
+                nalambalam: 'A sacred circuit visit to the four temples dedicated to the brothers of Lord Rama.',
+                hyderabad: 'Explore Charminar, Golconda Fort, Ramoji Film City and Hyderabad culture.',
+                mysore: 'Visit Mysore Palace, Brindavan Gardens and Bangalore city attractions.',
+                ooty: 'Tea plantations, Ooty Lake, botanical gardens and hill station views.',
+                kodaikanal: 'Kodai Lake, Coaker’s Walk, waterfalls and misty mountains.',
+                navagraha: 'Explore the 9 sacred temples dedicated to the Navagrahas.',
+                trivandrum: "Experience the cultural bliss of Kerala's capital city and Kovalam beach.",
+                wayanad: 'Explore the natural beauty of Wayanad with waterfalls, dams, and caves.',
+                guruvayoor: 'A spiritual pilgrimage to the famous Guruvayoor Temple and Anakkotta.',
+                kannur: 'Visit the revered temples and ancient shrines of Kannur district.'
+            };
+
+            const prices = {
+                munnar: 'From ₹12,500',
+                munnar_alleppey: 'From ₹18,900',
+                honeymoon: 'From ₹25,000',
+                south_india: 'From ₹14,000',
+                mookambika: 'On Request',
+                nalambalam: 'On Request',
+                hyderabad: 'From ₹15,500',
+                mysore: 'From ₹22,000',
+                ooty: 'From ₹12,000',
+                kodaikanal: 'From ₹14,500',
+                navagraha: 'On Request',
+                trivandrum: 'On Request',
+                wayanad: 'On Request',
+                guruvayoor: 'On Request',
+                kannur: 'On Request'
+            };
+
+            const groupType = {
+                munnar: '2+ Persons',
+                munnar_alleppey: '2+ Persons',
+                honeymoon: 'Couple',
+                south_india: 'Family',
+                mookambika: 'Group',
+                nalambalam: 'Any',
+                hyderabad: '2+ Persons',
+                mysore: '2+ Persons',
+                ooty: 'Family',
+                kodaikanal: 'Couple',
+                navagraha: 'Family',
+                trivandrum: 'Family',
+                wayanad: 'Family',
+                guruvayoor: 'Any',
+                kannur: 'Family'
+            };
+
+            // Check if packageData loaded from script.js and if id exists
+            const checkDataLoad = setInterval(() => {
+                if (window.packageData) {
+                    clearInterval(checkDataLoad);
+                    renderPage();
+                }
+            }, 50);
+
+            function renderPage() {
+                const pkg = window.packageData[packageId];
+                const mainContainer = document.getElementById('package-main-content');
+
+                if (!pkg) {
+                    mainContainer.innerHTML = `
+                        <div class="container" style="text-align: center; padding: 200px 0;">
+                            <h2>Package Not Found</h2>
+                            <p style="margin-top:20px;"><a href="index.html#packages" class="btn-outline-premium">Return to Packages</a></p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                let displayTitle = pkg.title.replace(/\([^)]*\)/g, '').trim();
+                let days = pkg.itinerary.length + ' Days';
+                if (packageId === 'mookambika') days = 'Customizable';
+                if (packageId === 'nalambalam' || packageId === 'guruvayoor') days = '1 Day';
+
+                const imgSource = images[packageId] || 'home.jpg';
+                const currentUrl = encodeURIComponent(window.location.href);
+
+                let itineraryHTML = pkg.itinerary.map(item => `
+                    <div class="itinerary-day gsap-fade-up">
+                        <h4><i class="fas fa-map-marker-alt" style="color:#ffcc33; margin-right:10px;"></i> ${item.day ? 'Day ' + item.day : 'Timeline'}</h4>
+                        <p>${item.content}</p>
+                    </div>
+                `).join('');
+
+                mainContainer.innerHTML = `
+                    <section class="details-hero container">
+                        <span class="section-label">SIGNATURE ITINERARY</span>
+                        <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); font-family: 'Playfair Display', serif; margin-bottom: 20px;">${displayTitle}</h1>
+                        <p style="font-size: 1.2rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">${descriptions[packageId] || 'Experience an unforgettable journey curated just for you.'}</p>
+                    </section>
+
+                    <section class="container">
+                        <div class="details-img-container gsap-fade-up">
+                            <img src="${imgSource}" alt="${displayTitle}">
+                        </div>
+
+                        <div class="details-grid">
+                            <!-- Left Content -->
+                            <div class="main-details">
+                                <div class="content-section gsap-fade-up">
+                                    <h3>Package Overview</h3>
+                                    <p class="overview-text">Immerse yourself in the authentic beauty and culture of this magnificent destination. Designed for the finest tastes, this signature package by Nightingale Holidays offers seamless travel, luxurious stays, and curated sightseeing experiences that will leave you with lifelong memories.</p>
+                                </div>
+
+                                <div class="content-section">
+                                    <h3 class="gsap-fade-up">Itinerary Details</h3>
+                                    <div class="itinerary-container" style="gap: 10px; display: grid;">
+                                        ${itineraryHTML}
+                                    </div>
+                                </div>
+
+                                <div class="content-section gsap-fade-up">
+                                    <h3>Inclusions & Exclusions</h3>
+                                    <div class="incl-excl-grid">
+                                        <div class="incl-box yes">
+                                            <h4><i class="fas fa-check-circle" style="color:#4CAF50; margin-right:10px;"></i> What's Included</h4>
+                                            <ul>
+                                                <li>Premium / 3+ Star Hotel Accommodation</li>
+                                                <li>Daily Breakfast at Hotels</li>
+                                                <li>AC Cab Transfers & Sightseeing</li>
+                                                <li>Meet & Greet Services on Arrival</li>
+                                                <li>Toll, Parking, & Driver Bata</li>
+                                            </ul>
+                                        </div>
+                                        <div class="incl-box no">
+                                            <h4><i class="fas fa-times-circle" style="color:#f44336; margin-right:10px;"></i> What's Not Included</h4>
+                                            <ul>
+                                                <li>Lunch / Dinner (unless specified)</li>
+                                                <li>Flight / Train / Bus Tickets</li>
+                                                <li>Monument Entry Fees & Camera Fees</li>
+                                                <li>Personal Expenses (Laundry, Tips)</li>
+                                                <li>Optional Activities (e.g., Boating)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Content (Sticky Sidebar) -->
+                            <div class="sidebar-column">
+                                <div class="sidebar-booking gsap-fade-up">
+                                    <p style="text-transform:uppercase; letter-spacing:2px; font-size:0.8rem; color:rgba(255,255,255,0.6); margin-bottom:10px;">Starting From</p>
+                                    <div class="sidebar-price">${prices[packageId] || 'On Request'}</div>
+                                    
+                                    <div style="margin: 30px 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                                        <div class="info-pill"><i class="far fa-clock"></i> <span>Duration: <strong>${days}</strong></span></div>
+                                        <div class="info-pill"><i class="far fa-user"></i> <span>Ideal For: <strong>${groupType[packageId] || 'All Travelers'}</strong></span></div>
+                                        <div class="info-pill"><i class="fas fa-map-marked-alt"></i> <span>Destination: <strong>${displayTitle}</strong></span></div>
+                                    </div>
+
+                                    <a href="https://wa.me/919048099499?text=Hello%20Nightingale%20Holidays!%20I%20am%20interested%20in%20the%20${encodeURIComponent(displayTitle)}%20package." target="_blank" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 18px;">
+                                        Enquire on WhatsApp <i class="fab fa-whatsapp"></i>
+                                    </a>
+
+                                    <div class="share-row">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=${currentUrl}" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://twitter.com/intent/tweet?url=${currentUrl}&text=Check%20out%20this%20amazing%20travel%20package%20by%20Nightingale%20Holidays!" target="_blank" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://wa.me/?text=Check%20out%20this%20amazing%20travel%20package:%20${currentUrl}" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                `;
+
+                // Run GSAP animations after rendering
+                if (window.gsap && window.ScrollTrigger) {
+                    gsap.from('.gsap-fade-up', {
+                        scrollTrigger: {
+                            trigger: '#package-main-content',
+                            start: 'top 80%'
+                        },
+                        y: 40,
+                        opacity: 0,
+                        duration: 0.8,
+                        stagger: 0.15,
+                        ease: 'power3.out'
+                    });
+                }
+            }
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919048099499?text=Hello%20Nightingale%20Holidays%2C%20I'm%20interested%20in%20your%20luxury%20services."
+        class="whatsapp-float" target="_blank"
+        style="position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>

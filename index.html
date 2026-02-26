@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightingale Holidays | Journey Beyond Every Destination</title>
+    <meta name="description"
+        content="Luxury travel agency specializing in premium experiences and cinematic journeys around the world.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Nightingale Holidays</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#destinations">Travels</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-socials">
+                <a href="https://wa.me/919048099499" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-scroll-container">
+            <section class="hero-sticky" id="home">
+                <!-- Layer 1: Cinematic Travel Background -->
+                <div class="hero-bg-layer">
+                    <div class="hero-bg-media"></div>
+                    <div class="hero-overlay-dark"></div>
+                </div>
+
+                <!-- Layer 2: Floating Destination Cards (Middle) -->
+                <div class="floating-cards-layer">
+                    <!-- Ooty Card -->
+                    <div class="card-float card-1" data-dest="ooty">
+                        <div class="card-inner">
+                            <img src="ooty.jpg" alt="Ooty" class="card-img">
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3>Ooty</h3>
+                                <p>Queen of Hills</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Kodaikanal Card -->
+                    <div class="card-float card-2" data-dest="kodaikanal">
+                        <div class="card-inner">
+                            <img src="kodai.jpg" alt="Kodaikanal" class="card-img">
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3>Kodaikanal</h3>
+                                <p>Princess of Hill Stations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mysore Card -->
+                    <div class="card-float card-3" data-dest="mysore">
+                        <div class="card-inner">
+                            <img src="mysore.jpg" alt="Mysore" class="card-img">
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3>Mysore</h3>
+                                <p>The Royal Heritage</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hyderabad Card -->
+                    <div class="card-float card-4" data-dest="hyderabad">
+                        <div class="card-inner">
+                            <img src="hyderabad.jpg" alt="Hyderabad" class="card-img">
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3>Hyderabad</h3>
+                                <p>City of Nizam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 3: Large Centered Heading Text (Top) -->
+                <div class="hero-text-layer">
+                    <div class="text-block block-0 active">
+                        <h1 class="main-title">Nightingale<br>Holidays</h1>
+                        <p class="hero-subtitle">EXPLORE BEYOND LIMITS</p>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="hero-scroll-indicator">
+                    <div class="scroll-label">
+                        <span>SCROLL TO EXPLORE</span>
+                        <div class="scroll-dot"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- About Section -->
+        <section id="about" class="about-premium">
+            <div class="container">
+                <!-- Integrated Stats Grid -->
+                <div class="stats-grid-modern"
+                    style="margin-bottom: 80px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 60px;">
+                    <div class="stat-card">
+                        <div class="stat-icon-lux"><i class="fas fa-calendar-check"></i></div>
+                        <div class="stat-main">
+                            <span class="stat-number counter" data-target="15">0</span><span
+                                class="stat-suffix">+</span>
+                        </div>
+                        <p class="stat-label">Years of Excellence</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-lux"><i class="fas fa-map-marked-alt"></i></div>
+                        <div class="stat-main">
+                            <span class="stat-number counter" data-target="500">0</span><span
+                                class="stat-suffix">+</span>
+                        </div>
+                        <p class="stat-label">Destinations Covered</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-lux"><i class="fas fa-users"></i></div>
+                        <div class="stat-main">
+                            <span class="stat-number counter" data-target="12">0</span><span
+                                class="stat-suffix">K</span>
+                        </div>
+                        <p class="stat-label">Happy Travelers</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-lux"><i class="fas fa-headset"></i></div>
+                        <div class="stat-main">
+                            <span class="stat-number counter" data-target="24">0</span><span
+                                class="stat-sep">/</span><span class="stat-number">7</span>
+                        </div>
+                        <p class="stat-label">Luxury Support</p>
+                    </div>
+                </div>
+
+                <div class="about-flex-container">
+                    <div class="about-visual">
+                        <div class="image-wrapper-fancy">
+                            <img src="pine.jpg" alt="Nightingale Holidays - Luxury Journey">
+                            <div class="experience-badge-lux">
+                                <div class="badge-content">
+                                    <span class="badge-number">15</span>
+                                    <span class="badge-text">YEARS OF<br>TRUST</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text-content">
+                        <span class="section-label">BEYOND IMAGINATION</span>
+                        <h2 class="section-title">The Art of <br>Curated Journeys</h2>
+                        <p class="about-description">Since 2011, Nightingale Holidays has been redefining the standard
+                            of luxury travel. We don't just book trips; we architect experiences that linger in the
+                            soul, blending local authenticity with world-class refinement.</p>
+
+                        <div class="features-grid-lux">
+                            <div class="feature-card-lux">
+                                <div class="f-icon"><i class="fas fa-gem"></i></div>
+                                <div class="f-info">
+                                    <h4>Handpicked Luxury</h4>
+                                    <p>Only the world's most exceptional properties make our selection.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card-lux">
+                                <div class="f-icon"><i class="fas fa-fingerprint"></i></div>
+                                <div class="f-info">
+                                    <h4>Signature Itineraries</h4>
+                                    <p>Bespoke plans tailored precisely to your unique travel style.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-cta-wrapper">
+                            <a href="#packages" class="btn-outline-premium">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages Section (Premium) -->
+        <section id="packages" class="packages-premium">
+            <div class="container">
+                <div class="section-header-center">
+                    <h2 class="section-title">Premium Travel Packages</h2>
+                    <p class="section-subheading">Handcrafted journeys designed with heart.</p>
+                </div>
+
+                <div class="flip-card-grid" id="home-packages-grid">
+
+                    <div class="flip-card flip-card-lux" data-id="guruvayoor">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="Guruvayoor/guruvayur-temple.jpg" onerror="this.src='home.jpg';"
+                                    alt="Guruvayoor Package">
+                                <div class="flip-card-overlay">
+                                    <h3>Guruvayoor Package</h3>
+                                    <p>Sacred temple pilgrimage journey.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Guruvayoor Package</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Visit Guruvayur Temple, Triprayar Temple,
+                                        Koodalmanikyam Temple, Payammel Temple,
+                                        Moozhikulam Temple.</p>
+                                    <a href="package-details.html?id=guruvayoor" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Guruvayoor%20Package"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="kannur">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="Kannur Temple Visit/mridanga saileswari.jpg" onerror="this.src='home.jpg';"
+                                    alt="Kannur Temple Visit">
+                                <div class="flip-card-overlay">
+                                    <h3>Kannur Temple Visit</h3>
+                                    <p>Spiritual journey in God's Own Country.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Kannur Temple Visit</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Visit Parassinikadavu Temple,
+                                        Rajarajeshwara Temple,
+                                        Muthappan Temple.</p>
+                                    <a href="package-details.html?id=kannur" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Kannur%20Temple%20Visit"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="honeymoon">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="kerala honeymoon.jpg" onerror="this.src='home.jpg';"
+                                    alt="Kerala Honeymoon Package">
+                                <div class="flip-card-overlay">
+                                    <h3>Kerala Honeymoon Package</h3>
+                                    <p>Romantic getaway crafted with love.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Kerala Honeymoon Package</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Day 1 – Arrival at Munnar
+                                        Day 2 – Munnar sightseeing
+                                        Day 3 – Thekkady visit
+                                        Day 4 – Mararikulam beach stay
+                                        Day 5 – Departure</p>
+                                    <a href="package-details.html?id=honeymoon" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Kerala%20Honeymoon%20Package"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="mookambika">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="mookambika.jpg" onerror="this.src='home.jpg';" alt="Mookambika Package">
+                                <div class="flip-card-overlay">
+                                    <h3>Mookambika Package</h3>
+                                    <p>Divine spiritual experience.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Mookambika Package</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Subramaniya Temple,
+                                        Dharmasthala,
+                                        Sringeri,
+                                        Mookambika Temple,
+                                        Udupi Krishna Temple,
+                                        Bekal Fort.</p>
+                                    <a href="package-details.html?id=mookambika" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Mookambika%20Package"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="munnar_alleppey">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="alapuzha.jpg" onerror="this.src='home.jpg';" alt="Munnar & Alappuzha Package">
+                                <div class="flip-card-overlay">
+                                    <h3>Munnar & Alappuzha Package</h3>
+                                    <p>From misty hills to backwaters.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Munnar & Alappuzha Package</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Day 1 – Cochin sightseeing
+                                        Day 2 – Munnar visit
+                                        Day 3 – Munnar sightseeing
+                                        Day 4 – Alleppey houseboat
+                                        Day 5 – Departure</p>
+                                    <a href="package-details.html?id=munnar_alleppey" class="view-details-link">View
+                                        Full Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Munnar%20&%20Alappuzha%20Package"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="navagraha">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="navagraha.jpg" onerror="this.src='home.jpg';" alt="Navagraha Temple Package">
+                                <div class="flip-card-overlay">
+                                    <h3>Navagraha Temple Package</h3>
+                                    <p>Visit all nine sacred temples.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Navagraha Temple Package</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Visit all nine Navagraha temples.</p>
+                                    <a href="package-details.html?id=navagraha" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Navagraha%20Temple%20Package"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="south_india">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="palani.jpg" onerror="this.src='home.jpg';"
+                                    alt="Palani Rameshwaram Madurai Package">
+                                <div class="flip-card-overlay">
+                                    <h3>South India Temple Tour</h3>
+                                    <p>Explore magnificent temple architecture.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">South India Tour</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Day 1 – Palani stay
+                                        Day 2 – Madurai & Rameshwaram
+                                        Day 3 – Rameshwaram sightseeing</p>
+                                    <a href="package-details.html?id=south_india" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Palani%20Rameshwaram%20Madurai%20Package"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="wayanad">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="wayanad.jpg" onerror="this.src='home.jpg';" alt="Wayanad Tour Package">
+                                <div class="flip-card-overlay">
+                                    <h3>Wayanad Tour Package</h3>
+                                    <p>Escape to the beautiful highlands.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Wayanad Tour Package</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Banasura Dam,
+                                        Edakkal Caves,
+                                        Soochipara Waterfalls,
+                                        Wildlife Sanctuary.</p>
+                                    <a href="package-details.html?id=wayanad" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Wayanad%20Tour%20Package"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="trivandrum">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="thiruvanthapuram.jpg" onerror="this.src='home.jpg';" alt="Trivandrum Package">
+                                <div class="flip-card-overlay">
+                                    <h3>Trivandrum Package</h3>
+                                    <p>Capital city's finest sights.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Trivandrum Package</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Padmanabhaswamy Temple,
+                                        Kovalam Beach,
+                                        Varkala Cliff.</p>
+                                    <a href="package-details.html?id=trivandrum" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Trivandrum%20Package"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="munnar">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="pine.jpg" onerror="this.src='home.jpg';" alt="Munnar">
+                                <div class="flip-card-overlay">
+                                    <h3>Munnar</h3>
+                                    <p>3 Day hill station escape.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Munnar</h4>
+                                <div class="flip-card-back-content">
+                                    <p>3 Day hill station escape.</p>
+                                    <a href="package-details.html?id=munnar" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Munnar"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="hyderabad">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="hyderabad.jpg" onerror="this.src='home.jpg';" alt="Hyderabad">
+                                <div class="flip-card-overlay">
+                                    <h3>Hyderabad</h3>
+                                    <p>Discover the heritage of the Nizam.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Hyderabad</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Charminar,
+                                        Golconda Fort,
+                                        Ramoji Film City,
+                                        Hussain Sagar.</p>
+                                    <a href="package-details.html?id=hyderabad" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Hyderabad"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="mysore">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="mysore.jpg" onerror="this.src='home.jpg';" alt="Mysore">
+                                <div class="flip-card-overlay">
+                                    <h3>Mysore</h3>
+                                    <p>Palaces, gardens, and heritage.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Mysore</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Mysore Palace,
+                                        Chamundi Hills,
+                                        Brindavan Gardens.</p>
+                                    <a href="package-details.html?id=mysore" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Mysore"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="ooty">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="ooty.jpg" onerror="this.src='home.jpg';" alt="Ooty">
+                                <div class="flip-card-overlay">
+                                    <h3>Ooty</h3>
+                                    <p>The Queen of Hill Stations.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Ooty</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Ooty Lake,
+                                        Botanical Garden,
+                                        Tea plantations.</p>
+                                    <a href="package-details.html?id=ooty" class="view-details-link">View Full Itinerary
+                                        <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Ooty"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="kodaikanal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="kodai.jpg" onerror="this.src='home.jpg';" alt="Kodaikanal">
+                                <div class="flip-card-overlay">
+                                    <h3>Kodaikanal</h3>
+                                    <p>The Princess of Hill Stations.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Kodaikanal</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Kodai Lake,
+                                        Coaker’s Walk,
+                                        Waterfalls,
+                                        Misty viewpoints.</p>
+                                    <a href="package-details.html?id=kodaikanal" class="view-details-link">View Full
+                                        Itinerary <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Kodaikanal"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card flip-card-lux" data-id="nalambalam">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="Guruvayoor/guruvayur-temple.jpg" onerror="this.src='home.jpg';"
+                                    alt="Nalambalam Pilgrimage">
+                                <div class="flip-card-overlay">
+                                    <h3>Nalambalam Pilgrimage</h3>
+                                    <p>Sacred four-temple Rama circuit.</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="flip-card-back-title">Nalambalam Pilgrimage</h4>
+                                <div class="flip-card-back-content">
+                                    <p>Visit Thriprayar, Koodalmanikyam, Moozhikkulam, and Payammel temples in one
+                                        sacred journey.</p>
+                                    <a href="package-details.html?id=nalambalam" class="view-details-link">View Full
+                                        Itinerary
+                                        <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <a href="https://wa.me/919048099499?text=Hello%20I%20am%20interested%20in%20Nalambalam%20Pilgrimage"
+                                    target="_blank" class="flip-wa-btn">Enquire on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section (Cinematic Masonry) -->
+        <section id="gallery" class="gallery-premium">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-label">VISUAL STORIES</span>
+                    <h2 class="section-title">Travel Moments</h2>
+                </div>
+
+                <div class="gallery-container-lux">
+                    <div class="gallery-track">
+                        <!-- Original Set -->
+                        <div class="gallery-box">
+                            <img src="Guruvayoor/12972026PunnathurKotta_Main.jpg" alt="Punnathur Kotta">
+                            <div class="gallery-overlay">
+                                <h4>Punnathur Kotta</h4>
+                                <p>Sanctuary of Giants</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Kannur Temple Visit/kalarivathukal.webp" alt="Kalarivathukal Temple">
+                            <div class="gallery-overlay">
+                                <h4>Kalarivathukal</h4>
+                                <p>Spiritual Heritage</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Kannur Temple Visit/peralaserry pond.jpg" alt="Peralaserry Pond">
+                            <div class="gallery-overlay">
+                                <h4>Peralaserry</h4>
+                                <p>Infinite Reflections</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Guruvayoor/punnathur-kotta-anakkotta.jpg" alt="Anakkotta">
+                            <div class="gallery-overlay">
+                                <h4>Anakkotta</h4>
+                                <p>The Elephant Yard</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Kannur Temple Visit/mridanga saileswari.jpg" alt="Mridanga Saileswari">
+                            <div class="gallery-overlay">
+                                <h4>Mridanga Saileswari</h4>
+                                <p>Divine Resonance</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Kannur Temple Visit/parasanikadavu.jfif" alt="Parassanikadavu">
+                            <div class="gallery-overlay">
+                                <h4>Parassanikadavu</h4>
+                                <p>Muthappan's Abode</p>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate Set for Seamless Cycle -->
+                        <div class="gallery-box">
+                            <img src="Guruvayoor/12972026PunnathurKotta_Main.jpg" alt="Punnathur Kotta">
+                            <div class="gallery-overlay">
+                                <h4>Punnathur Kotta</h4>
+                                <p>Sanctuary of Giants</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Kannur Temple Visit/kalarivathukal.webp" alt="Kalarivathukal Temple">
+                            <div class="gallery-overlay">
+                                <h4>Kalarivathukal</h4>
+                                <p>Spiritual Heritage</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Kannur Temple Visit/peralaserry pond.jpg" alt="Peralaserry Pond">
+                            <div class="gallery-overlay">
+                                <h4>Peralaserry</h4>
+                                <p>Infinite Reflections</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Guruvayoor/punnathur-kotta-anakkotta.jpg" alt="Anakkotta">
+                            <div class="gallery-overlay">
+                                <h4>Anakkotta</h4>
+                                <p>The Elephant Yard</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Kannur Temple Visit/mridanga saileswari.jpg" alt="Mridanga Saileswari">
+                            <div class="gallery-overlay">
+                                <h4>Mridanga Saileswari</h4>
+                                <p>Divine Resonance</p>
+                            </div>
+                        </div>
+                        <div class="gallery-box">
+                            <img src="Kannur Temple Visit/parasanikadavu.jfif" alt="Parassanikadavu">
+                            <div class="gallery-overlay">
+                                <h4>Parassanikadavu</h4>
+                                <p>Muthappan's Abode</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer-center">
+                    <a href="javascript:void(0)" class="btn-outline-premium">View Full Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travels (Destinations) Section -->
+        <section id="destinations" class="destinations-premium">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-label">DISCOVER</span>
+                    <h2 class="section-title">Travels</h2>
+                </div>
+
+                <div class="travel-gallery-grid">
+                    <div class="travel-img-only">
+                        <img src="travel1.jpeg" alt="Travel 1">
+                    </div>
+                    <div class="travel-img-only">
+                        <img src="travel2.jpeg" alt="Travel 2">
+                    </div>
+                    <div class="travel-img-only">
+                        <img src="travel3.jpeg" alt="Travel 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="contact-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-info">
+                    <div class="footer-brand">
+                        <h2>Nightingale</h2>
+                        <p>Crafting bespoke luxury journeys for the discerning traveler since 2011. Your gateway to the
+                            soul of God's Own Country and beyond.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/919048099499" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Navigation -->
+                <div class="footer-info">
+                    <h4>Collections</h4>
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#about">Our Story</a></p>
+                    <p><a href="#destinations">Worldwide</a></p>
+                    <p><a href="#packages">Tour Packages</a></p>
+                    <p><a href="#gallery">Visual Stories</a></p>
+                </div>
+                <!-- Col 3: Offices -->
+                <div class="footer-info">
+                    <h4>Our Offices</h4>
+                    <p><strong>Calicut:</strong> Mankavu, Kozhikode</p>
+                    <p><strong>Kannur:</strong> Mattanur, Kannur</p>
+                    <p><strong>Operational:</strong> 24/7 Concierge</p>
+                </div>
+                <!-- Col 4: Contact -->
+                <div class="footer-info">
+                    <h4>Direct Contact</h4>
+                    <p>+91 9847068334</p>
+                    <p>+91 9048099499</p>
+                    <p>info@nightingaleholidays.com</p>
+                    <div style="margin-top: 30px;">
+                        <a href="https://wa.me/919048099499?text=Hello%20Nightingale%20Holidays%2C%20I'm%20interested%20in%20planning%20a%20luxury%20trip."
+                            class="btn-outline-premium" target="_blank"
+                            style="padding: 12px 25px; font-size: 0.9rem;">Enquire on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nightingale Holidays. All rights reserved.</p>
+                <p>Designed for Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Itinerary -->
+    <div id="package-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919048099499?text=Hello%20Nightingale%20Holidays%2C%20I'm%20interested%20in%20your%20luxury%20services."
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Flip Card Scroll Reveal & Mobile Tap handling
+            if (window.gsap && window.ScrollTrigger) {
+                gsap.from('.flip-card-lux', {
+                    scrollTrigger: {
+                        trigger: '#packages',
+                        start: "top 80%",
+                    },
+                    y: 80,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power4.out"
+                });
+
+                // Travels Section Scroll Reveal
+                gsap.set('.travel-img-only', { transformPerspective: 1000 });
+                gsap.from('.travel-img-only', {
+                    scrollTrigger: {
+                        trigger: '#destinations',
+                        start: "top 85%",
+                    },
+                    y: 100,
+                    rotationX: -20,
+                    scale: 0.9,
+                    opacity: 0,
+                    duration: 1.2,
+                    stagger: 0.3,
+                    ease: "power4.out"
+                });
+            }
+
+            // Mobile tap to flip
+            document.querySelectorAll('.flip-card').forEach(card => {
+                card.addEventListener('click', function (e) {
+                    // Don't flip if clicking the WhatsApp button
+                    if (e.target.closest('.flip-wa-btn')) return;
+
+                    if (window.innerWidth <= 1024) {
+                        this.classList.toggle('flipped');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
