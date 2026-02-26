@@ -96,12 +96,19 @@ header .container {
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.9rem;
-    font-weight: 700;
-    color: #fff;
-    font-style: italic;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-medium);
+}
+
+header.scrolled .logo img {
+    height: 45px;
 }
 
 .header-socials {
@@ -383,16 +390,30 @@ nav ul li a.nav-highlight {
     opacity: 1;
 }
 
-.main-title {
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(3.5rem, 11vw, 11vw);
-    font-weight: 800;
-    color: #fff;
-    margin: 0;
-    line-height: 0.82;
-    letter-spacing: -0.04em;
-    text-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
-    margin-bottom: 5px;
+@media (max-width: 768px) {
+    .hero-subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 0.6em;
+        margin-top: 15px;
+        padding-left: 0.6em;
+    }
+
+    /* Center floating cards layer on mobile */
+    .floating-cards-layer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-float {
+        /* Standardize centering for mobile */
+        margin-top: -160px !important;
+        margin-left: -110px !important;
+    }
+}
+
+.text-block.active {
+    opacity: 1;
 }
 
 .hero-subtitle {

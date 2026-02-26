@@ -343,14 +343,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial Set
         gsap.set('.card-1, .card-2', { x: -window.innerWidth * 0.8, opacity: 0, rotate: -25 });
         gsap.set('.card-3, .card-4', { x: window.innerWidth * 0.8, opacity: 0, rotate: 25 });
-        gsap.set('.main-title', { opacity: 0, scale: 0.9, filter: 'blur(20px)' });
-
         introTl
-            .to('.main-title', { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 2.5, delay: 0.5 })
-            .to('.hero-subtitle', { opacity: 1, y: 0, duration: 1.5 }, "-=1.5")
+            .to('.hero-subtitle', { opacity: 1, y: 0, duration: 1.5, delay: 0.5 })
             .to(cards, {
                 x: (i) => {
-                    // Refined positions for cinematic overlap
+                    const isMobile = window.innerWidth <= 768;
+                    if (isMobile) {
+                        return [-30, -10, 10, 30][i];
+                    }
                     const positions = [
                         -window.innerWidth * 0.25, // Ooty (Left)
                         -window.innerWidth * 0.08, // Kodaikanal (Center-Left)
@@ -359,7 +359,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     ];
                     return positions[i];
                 },
-                y: (i) => [-140, 100, -120, 130][i], // Balanced high/low stagger
+                y: (i) => {
+                    const isMobile = window.innerWidth <= 768;
+                    return isMobile ? [-70, -30, 10, 50][i] : [-140, 100, -120, 130][i];
+                },
                 rotate: (i) => [-15, 6, -8, 14][i], // Distinct rotations
                 opacity: 1,
                 scale: 1,
@@ -379,8 +382,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const bgMedia = document.querySelector('.hero-bg-media');
         if (bgMedia) scrollTl.to(bgMedia, { scale: 1.25, filter: 'brightness(0.3) blur(2px)' }, 0);
 
-        const mainTitle = document.querySelector('.main-title');
-        if (mainTitle) scrollTl.to(mainTitle, { y: -100, opacity: 0.2, scale: 0.9, filter: 'blur(10px)' }, 0);
 
         cards.forEach((card, i) => {
             scrollTl.to(card, {
