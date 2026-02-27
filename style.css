@@ -577,25 +577,33 @@ nav ul li a.nav-highlight {
 }
 
 .stat-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.05);
+    /* Brighter background */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* More visible border */
     padding: 40px 20px;
     border-radius: 30px;
     text-align: center;
     transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Adds depth */
+    backdrop-filter: blur(10px);
 }
 
 .stat-card:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(255, 204, 51, 0.1);
 }
 
 .stat-icon-lux {
     font-size: 2rem;
     color: #ffcc33;
     margin-bottom: 30px;
-    opacity: 0.8;
+    opacity: 1;
+    /* Make it fully opaque */
+    text-shadow: 0 0 15px rgba(255, 204, 51, 0.4);
 }
 
 .stat-main {
@@ -608,8 +616,10 @@ nav ul li a.nav-highlight {
 .stat-number {
     font-size: 4.5rem;
     font-weight: 800;
-    color: #fff;
+    color: #ffffff;
     line-height: 1;
+    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    /* Add glow */
 }
 
 .stat-suffix,
@@ -618,6 +628,8 @@ nav ul li a.nav-highlight {
     color: #ffcc33;
     font-weight: 700;
     margin-left: 5px;
+    text-shadow: 0 5px 15px rgba(255, 204, 51, 0.4);
+    /* Add glow */
 }
 
 .stat-label {
