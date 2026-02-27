@@ -572,7 +572,7 @@ nav ul li a.nav-highlight {
 
 .stats-grid-modern {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -1627,6 +1627,12 @@ nav ul li a.nav-highlight {
 
 
     /* Stats */
+    .stats-grid-modern {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
     .stat-number {
         font-size: 3rem;
     }
