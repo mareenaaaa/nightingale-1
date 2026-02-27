@@ -20,18 +20,18 @@
     <style>
         .details-hero {
             position: relative;
-            padding-top: 150px;
-            padding-bottom: 80px;
+            padding-top: 130px;
+            padding-bottom: 40px;
             text-align: center;
             background: linear-gradient(180deg, rgba(14, 21, 17, 1) 0%, rgba(14, 21, 17, 0) 100%);
         }
 
         .details-img-container {
             width: 100%;
-            height: 60vh;
+            height: 50vh;
             border-radius: 30px;
             overflow: hidden;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             position: relative;
         }
 
@@ -45,8 +45,8 @@
         .details-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 50px;
-            padding-bottom: 80px;
+            gap: 40px;
+            padding-bottom: 50px;
         }
 
         .sidebar-booking {
@@ -213,7 +213,9 @@
     <!-- Header -->
     <header class="scrolled">
         <div class="container">
-            <div class="logo">Nightingale Holidays</div>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Nightingale Holidays">
+            </a>
             <nav>
                 <ul>
                     <li><a href="index.html#home">Home</a></li>
@@ -225,9 +227,11 @@
                 </ul>
             </nav>
             <div class="header-socials">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/share/1DfszVZ6SN/" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
                 <a href="https://wa.me/919048099499" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/nightingale.holidayss?utm_source=qr&igsh=OWQwYjJ4cXR3b3ps"
+                    target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
             <button class="mobile-nav-toggle" aria-label="Toggle navigation">
                 <span></span>
@@ -252,10 +256,11 @@
                     <h3>Nightingale Holidays</h3>
                     <p>Curating extraordinary journeys and redefining luxury travel since 2011.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nightingale.holidayss?utm_source=qr&igsh=OWQwYjJ4cXR3b3ps"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1DfszVZ6SN/" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
                         <a href="https://wa.me/919048099499" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <!-- Col 2: Navigation -->
@@ -278,11 +283,18 @@
                     <h4>Direct Contact</h4>
                     <p>+91 9847068334</p>
                     <p>+91 9048099499</p>
-                    <p>info@nightingaleholidays.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Nightingale Holidays. All rights reserved.</p>
+                <div class="developer-credit">
+                    <a href="https://www.instagram.com/intellex.web?igsh=MXc4Z2Uwd243OHpqdA%3D%3D&utm_source=qr"
+                        target="_blank"
+                        style="color: rgba(255,255,255,0.5); text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#ffcc33'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">
+                        MEET THE DEVELOPERS <i class="fab fa-instagram" style="font-size: 1.1rem;"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -309,7 +321,11 @@
                 trivandrum: 'thiruvanthapuram.jpg',
                 wayanad: 'wayanad.jpg',
                 guruvayoor: 'Guruvayoor/guruvayur-temple.jpg',
-                kannur: 'Kannur_Temple_Visit/mridanga saileswari.jpg'
+                kannur: 'Kannur_Temple_Visit/mridanga saileswari.jpg',
+                malaysia: 'malaysia1.jpg',
+                vietnam: 'vietnam.jpg',
+                thailand: 'thailand.jpg',
+                europe: 'europe.jpg'
             };
 
             const descriptions = {
@@ -327,7 +343,11 @@
                 trivandrum: "Experience the cultural bliss of Kerala's capital city and Kovalam beach.",
                 wayanad: 'Explore the natural beauty of Wayanad with waterfalls, dams, and caves.',
                 guruvayoor: 'A spiritual pilgrimage to the famous Guruvayoor Temple and Anakkotta.',
-                kannur: 'Visit the revered temples and ancient shrines of Kannur district.'
+                kannur: 'Visit the revered temples and ancient shrines of Kannur district.',
+                malaysia: 'Explore the vibrant city of Kuala Lumpur and the breathtaking Genting Highlands.',
+                vietnam: 'Immerse yourself in the rich culture of Vietnam from Ho Chi Minh to Halong Bay.',
+                thailand: 'A spectacular journey through Bangkok and Pattaya with sandy beaches and rich wildlife.',
+                europe: 'A grand tour across France, Belgium, Netherlands, Germany, and Switzerland.'
             };
 
             const prices = {
@@ -345,7 +365,11 @@
                 trivandrum: 'On Request',
                 wayanad: 'On Request',
                 guruvayoor: 'On Request',
-                kannur: 'On Request'
+                kannur: 'On Request',
+                malaysia: '₹16,299 / Person',
+                vietnam: '₹58,299 / Person',
+                thailand: '₹27,500 / Person',
+                europe: 'On Request'
             };
 
             const groupType = {
@@ -363,7 +387,11 @@
                 trivandrum: 'Family',
                 wayanad: 'Family',
                 guruvayoor: 'Any',
-                kannur: 'Family'
+                kannur: 'Family',
+                malaysia: '2+ Persons',
+                vietnam: '2+ Persons',
+                thailand: '2+ Persons',
+                europe: '2+ Persons'
             };
 
             // Check if packageData loaded from script.js and if id exists
@@ -396,12 +424,6 @@
                 const imgSource = images[packageId] || 'home.jpg';
                 const currentUrl = encodeURIComponent(window.location.href);
 
-                let itineraryHTML = pkg.itinerary.map(item => `
-                    <div class="itinerary-day gsap-fade-up">
-                        <h4><i class="fas fa-map-marker-alt" style="color:#ffcc33; margin-right:10px;"></i> ${item.day ? 'Day ' + item.day : 'Timeline'}</h4>
-                        <p>${item.content}</p>
-                    </div>
-                `).join('');
 
                 mainContainer.innerHTML = `
                     <section class="details-hero container">
@@ -422,37 +444,15 @@
                                     <h3>Package Overview</h3>
                                     <p class="overview-text">Immerse yourself in the authentic beauty and culture of this magnificent destination. Designed for the finest tastes, this signature package by Nightingale Holidays offers seamless travel, luxurious stays, and curated sightseeing experiences that will leave you with lifelong memories.</p>
                                 </div>
-
-                                <div class="content-section">
-                                    <h3 class="gsap-fade-up">Itinerary Details</h3>
-                                    <div class="itinerary-container" style="gap: 10px; display: grid;">
-                                        ${itineraryHTML}
-                                    </div>
-                                </div>
-
                                 <div class="content-section gsap-fade-up">
-                                    <h3>Inclusions & Exclusions</h3>
-                                    <div class="incl-excl-grid">
-                                        <div class="incl-box yes">
-                                            <h4><i class="fas fa-check-circle" style="color:#4CAF50; margin-right:10px;"></i> What's Included</h4>
-                                            <ul>
-                                                <li>Premium / 3+ Star Hotel Accommodation</li>
-                                                <li>Daily Breakfast at Hotels</li>
-                                                <li>AC Cab Transfers & Sightseeing</li>
-                                                <li>Meet & Greet Services on Arrival</li>
-                                                <li>Toll, Parking, & Driver Bata</li>
-                                            </ul>
-                                        </div>
-                                        <div class="incl-box no">
-                                            <h4><i class="fas fa-times-circle" style="color:#f44336; margin-right:10px;"></i> What's Not Included</h4>
-                                            <ul>
-                                                <li>Lunch / Dinner (unless specified)</li>
-                                                <li>Flight / Train / Bus Tickets</li>
-                                                <li>Monument Entry Fees & Camera Fees</li>
-                                                <li>Personal Expenses (Laundry, Tips)</li>
-                                                <li>Optional Activities (e.g., Boating)</li>
-                                            </ul>
-                                        </div>
+                                    <h3>Itinerary Highlights</h3>
+                                    <div class="itinerary-list">
+                                        ${pkg.itinerary.map(item => `
+                                            <div class="itinerary-day" style="margin-bottom: 20px;">
+                                                <h4 style="color: #ffcc33; margin-bottom: 10px;">Day ${item.day}${item.title ? ': ' + item.title : ''}</h4>
+                                                <p style="white-space: pre-line; line-height: 1.6;">${item.content}</p>
+                                            </div>
+                                        `).join('')}
                                     </div>
                                 </div>
                             </div>
@@ -460,16 +460,13 @@
                             <!-- Right Content (Sticky Sidebar) -->
                             <div class="sidebar-column">
                                 <div class="sidebar-booking gsap-fade-up">
-                                    <p style="text-transform:uppercase; letter-spacing:2px; font-size:0.8rem; color:rgba(255,255,255,0.6); margin-bottom:10px;">Starting From</p>
-                                    <div class="sidebar-price">${prices[packageId] || 'On Request'}</div>
-                                    
-                                    <div style="margin: 30px 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                                    <div style="margin: 0 0 30px 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 30px;">
                                         <div class="info-pill"><i class="far fa-clock"></i> <span>Duration: <strong>${days}</strong></span></div>
                                         <div class="info-pill"><i class="far fa-user"></i> <span>Ideal For: <strong>${groupType[packageId] || 'All Travelers'}</strong></span></div>
                                         <div class="info-pill"><i class="fas fa-map-marked-alt"></i> <span>Destination: <strong>${displayTitle}</strong></span></div>
                                     </div>
 
-                                    <a href="https://wa.me/919048099499?text=Hello%20Nightingale%20Holidays!%20I%20am%20interested%20in%20the%20${encodeURIComponent(displayTitle)}%20package." target="_blank" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 18px;">
+                                    <a href="https://wa.me/919048099499?text=Hello%20Nightingale%20Holidays!%20I%20am%20interested%20in%20the%20${encodeURIComponent(displayTitle)}%20package." target="_blank" class="btn-primary" style="margin-top:20px;">
                                         Enquire on WhatsApp <i class="fab fa-whatsapp"></i>
                                     </a>
 

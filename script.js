@@ -253,6 +253,161 @@ window.packageData = {
                 "content": "Visit Parassinikadavu Muthappan Temple, Sree Peralassery Temple, Rajarajeshwara Temple, Mridanga Saileswari Temple, and Kalarivathukkal Bhagavathi Temple."
             }
         ]
+    },
+    "malaysia": {
+        "title": "MALAYSIA TOUR PACKAGE",
+        "itinerary": [
+            {
+                "day": 1,
+                "title": "Arrival & Putrajaya",
+                "content": "• Pickup on arrival & breakfast enroute\n• Sightseeing: Putrajaya Photo Stop on way to hotel\n• Overnight Stay: Hotel"
+            },
+            {
+                "day": 2,
+                "title": "Genting Highlands",
+                "content": "• Breakfast at hotel\n• Sightseeing: Genting Highlands with 2-way Cable Car Ticket (8 Hours)\n• Overnight Stay: Hotel"
+            },
+            {
+                "day": 3,
+                "title": "Kuala Lumpur City Tour",
+                "content": "• Breakfast at hotel\n• Sightseeing: KL Tower, Petronas Towers Photo Stop & Other Key Sights (4 Hours City Tour)\n• Overnight Stay: Hotel"
+            },
+            {
+                "day": 4,
+                "title": "Departure",
+                "content": "• Breakfast & hotel checkout\n• Transfer to airport as per flight schedule"
+            }
+        ]
+    },
+    "vietnam": {
+        "title": "VIETNAM TOUR PACKAGE",
+        "itinerary": [
+            {
+                "day": 1,
+                "title": "Ho Chi Minh Arrival",
+                "content": "• Welcome to Ho Chi Minh City, the largest and most vibrant city of Vietnam.\n• On arrival at Tan Son Nhat International Airport, meet the driver and transfer to hotel for check-in.\n• Overnight stay in Ho Chi Minh City."
+            },
+            {
+                "day": 2,
+                "title": "Cu Chi Tunnel & Ho Chi Minh City Tour",
+                "content": "• Morning city tour covering: Independence Palace, Notre Dame Cathedral, Central Post Office, and War Remnants Museum\n• Lunch at a local restaurant.\n• Afternoon visit to Cu Chi Tunnels: Introduction video, explore underground living areas, and enjoy special tea & cassava.\n• Return to Ho Chi Minh City."
+            },
+            {
+                "day": 3,
+                "title": "Fly to Da Nang & Hoi An",
+                "content": "• Breakfast & hotel check-out, then transfer to airport for flight to Da Nang.\n• Visit Non-Nuoc Stone Carving Village.\n• Visit Hoi An Ancient Town: Fukian Assembly Hall, Japanese Covered Bridge, lantern-lit streets.\n• Boat ride with floating lantern ceremony & dinner.\n• Return to Da Nang hotel."
+            },
+            {
+                "day": 4,
+                "title": "Ba Na Hills & Golden Bridge",
+                "content": "• Morning pickup for Ba Na Hills.\n• Cable car ride (Guinness World Record holder).\n• Visit Golden Bridge, Linh Ung Pagoda, Le Jardin D'Amour.\n• French Village exploration and Fantasy Park.\n• Return to Da Nang by evening."
+            },
+            {
+                "day": 5,
+                "title": "Fly To Hanoi \u2013 Half Day City Tour",
+                "content": "• Breakfast & hotel check-out, followed by flight to Hanoi.\n• Afternoon sightseeing: Temple of Literature, Hoa Lo Prison Museum.\n• Return to hotel."
+            },
+            {
+                "day": 6,
+                "title": "Ninh Binh \u2013 Hoa Lu \u2013 Tam Coc",
+                "content": "• Drive to Ninh Binh to visit Hoa Lu Ancient Capital.\n• Cycling tour around villages.\n• Buffet lunch at a local restaurant.\n• Bamboo boat ride in Tam Coc.\n• Return to Hanoi by evening."
+            },
+            {
+                "day": 7,
+                "title": "Hanoi to Halong Bay Cruise",
+                "content": "• Morning transfer to Halong Bay.\n• Board cruise and enjoy scenic limestone karsts and cave exploration.\n• Swimming, sunset views, dinner & night fishing.\n• Overnight on cruise."
+            },
+            {
+                "day": 8,
+                "title": "Halong to Hanoi Departure",
+                "content": "• Morning relaxation on cruise.\n• Brunch onboard.\n• Disembark and transfer to Hanoi Airport for return flight."
+            }
+        ]
+    },
+    "thailand": {
+        "title": "THAILAND PACKAGE",
+        "itinerary": [
+            {
+                "day": 1,
+                "title": "Bangkok to Pattaya",
+                "content": "• Arrive Bangkok International Airport\n• Drive to Pattaya\n• Check in to the hotel in Pattaya\n• Alcazar Show\n• Overnight at hotel in Pattaya"
+            },
+            {
+                "day": 2,
+                "title": "Coral Island",
+                "content": "• Breakfast in the hotel\n• Transfer to Coral Island by speed boat\n• Proceed for Lunch\n• Evening at Leisure and relax\n• Later proceed for Dinner\n• Overnight at hotel"
+            },
+            {
+                "day": 3,
+                "title": "Nong Nooch Village",
+                "content": "• Breakfast in the hotel\n• Proceed to visit the Nong Nooch Village\n• Proceed for Lunch\n• Evening free leisure and proceed for Dinner\n• Overnight at hotel"
+            },
+            {
+                "day": 4,
+                "title": "Safari World & Bangkok",
+                "content": "• Breakfast in the hotel and check out from Pattaya\n• Proceed for Full Day Safari world tour with Marine Park\n• Check in at the Hotel in Bangkok\n• Proceed for Dinner\n• Overnight at hotel"
+            },
+            {
+                "day": 5,
+                "title": "Departure",
+                "content": "• Breakfast in the hotel & Check out\n• Proceed to the Airport for your flight back to respective hub"
+            }
+        ]
+    },
+    "europe": {
+        "title": "EUROPE TOUR",
+        "itinerary": [
+            {
+                "day": 1,
+                "title": "Arrive in Paris",
+                "content": "• Arrival at Paris Charles de Gaulle Airport and transfer to hotel\n• Evening Seine River Cruise: View illuminated monuments & iconic bridges\n• Paris Illumination Tour: Experience the “City of Lights” at night\n• Overnight stay in Paris"
+            },
+            {
+                "day": 2,
+                "title": "Paris City Tour & Eiffel Tower",
+                "content": "• Guided city tour covering Place Vendôme, Musée d’Orsay, Champs-Élysées, and Arc de Triomphe\n• Visit the majestic Palace of Versailles\n• Ascend to the 3rd level of the Eiffel Tower for panoramic views\n• Overnight stay in Paris"
+            },
+            {
+                "day": 3,
+                "title": "Disneyland Paris",
+                "content": "• Day free for leisure or optional excursion to Disneyland Paris\n• Choice of Disneyland Park or Walt Disney Studios Park\n• Overnight stay in Paris"
+            },
+            {
+                "day": 4,
+                "title": "Paris to Brussels & Netherlands",
+                "content": "• Drive to Brussels, Belgium with a Photo stop at the Atomium\n• Orientation tour of Brussels: Grand Place and Manneken Pis Statue\n• Continue journey to the Netherlands and hotel check-in\n• Overnight stay in Netherlands"
+            },
+            {
+                "day": 5,
+                "title": "Netherlands Highlights",
+                "content": "• Visit Keukenhof Gardens (tulips) or Madurodam (miniature park)\n• Visit Zaanse Schans village, Cheese & Clog Factory, and windwills\n• Amsterdam Canal Cruise through historic canals\n• Overnight stay in Netherlands"
+            },
+            {
+                "day": 6,
+                "title": "Luxembourg to Strasbourg",
+                "content": "• Scenic Tram Ride through Luxembourg city and walking tour\n• Orientation tour of Strasbourg and photo stop at European Parliament\n• Overnight stay in France/Germany"
+            },
+            {
+                "day": 7,
+                "title": "Welcome to Switzerland",
+                "content": "• Scenic drive into the Swiss Alps\n• Arrival and check-in to your hotel in Switzerland\n• Evening at leisure to enjoy the mountain breeze"
+            },
+            {
+                "day": 8,
+                "title": "Mount Titlis / Interlaken",
+                "content": "• Breathtaking cable car ride to Mount Titlis\n• Experience the Ice Flyer and Glacier Cave\n• Visit the charming town of Interlaken"
+            },
+            {
+                "day": 9,
+                "title": "Jungfraujoch - Top of Europe",
+                "content": "• Highly recommended optional tour to Jungfraujoch\n• Witness the spectacular Aletsch Glacier\n• Return to hotel for a relaxing overnight stay"
+            },
+            {
+                "day": 10,
+                "title": "Departure",
+                "content": "• Breakfast at the hotel\n• Checkout and transfer to the airport for your onward journey"
+            }
+        ]
     }
 };
 
@@ -343,27 +498,32 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial Set
         gsap.set('.card-1, .card-2', { x: -window.innerWidth * 0.8, opacity: 0, rotate: -25 });
         gsap.set('.card-3, .card-4', { x: window.innerWidth * 0.8, opacity: 0, rotate: 25 });
+        gsap.set('.main-title', { opacity: 0, scale: 0.9, filter: 'blur(20px)' });
+
         introTl
-            .to('.hero-subtitle', { opacity: 1, y: 0, duration: 1.5, delay: 0.5 })
+            .to('.main-title', { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 2.5, delay: 0.5 })
+            .to('.hero-subtitle', { opacity: 1, y: 0, duration: 1.5 }, "-=1.5")
             .to(cards, {
                 x: (i) => {
                     const isMobile = window.innerWidth <= 768;
-                    if (isMobile) {
-                        return [-30, -10, 10, 30][i];
-                    }
-                    const positions = [
-                        -window.innerWidth * 0.25, // Ooty (Left)
-                        -window.innerWidth * 0.08, // Kodaikanal (Center-Left)
-                        window.innerWidth * 0.12,  // Mysore (Center-Right)
-                        window.innerWidth * 0.28   // Hyderabad (Right)
+                    const positions = isMobile ? [
+                        -window.innerWidth * 0.12,
+                        -window.innerWidth * 0.03,
+                        window.innerWidth * 0.03,
+                        window.innerWidth * 0.12
+                    ] : [
+                        -window.innerWidth * 0.25,
+                        -window.innerWidth * 0.08,
+                        window.innerWidth * 0.12,
+                        window.innerWidth * 0.28
                     ];
                     return positions[i];
                 },
                 y: (i) => {
                     const isMobile = window.innerWidth <= 768;
-                    return isMobile ? [-70, -30, 10, 50][i] : [-140, 100, -120, 130][i];
+                    return isMobile ? [-40, 60, -35, 75][i] : [-140, 100, -120, 130][i];
                 },
-                rotate: (i) => [-15, 6, -8, 14][i], // Distinct rotations
+                rotate: (i) => [-15, 6, -8, 14][i],
                 opacity: 1,
                 scale: 1,
                 stagger: 0.12
@@ -382,6 +542,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const bgMedia = document.querySelector('.hero-bg-media');
         if (bgMedia) scrollTl.to(bgMedia, { scale: 1.25, filter: 'brightness(0.3) blur(2px)' }, 0);
 
+        const mainTitle = document.querySelector('.main-title');
+        if (mainTitle) scrollTl.to(mainTitle, { y: -100, opacity: 0.2, scale: 0.9, filter: 'blur(10px)' }, 0);
 
         cards.forEach((card, i) => {
             scrollTl.to(card, {
