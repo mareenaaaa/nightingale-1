@@ -507,10 +507,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 x: (i) => {
                     const isMobile = window.innerWidth <= 768;
                     const positions = isMobile ? [
-                        -window.innerWidth * 0.12,
-                        -window.innerWidth * 0.03,
-                        window.innerWidth * 0.03,
-                        window.innerWidth * 0.12
+                        -window.innerWidth * 0.26,
+                        -window.innerWidth * 0.08,
+                        window.innerWidth * 0.08,
+                        window.innerWidth * 0.26
                     ] : [
                         -window.innerWidth * 0.25,
                         -window.innerWidth * 0.08,
@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 y: (i) => {
                     const isMobile = window.innerWidth <= 768;
-                    return isMobile ? [-40, 60, -35, 75][i] : [-140, 100, -120, 130][i];
+                    return isMobile ? [-80, 50, -60, 70][i] : [-140, 100, -120, 130][i];
                 },
                 rotate: (i) => [-15, 6, -8, 14][i],
                 opacity: 1,

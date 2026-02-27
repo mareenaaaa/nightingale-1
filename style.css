@@ -1588,7 +1588,7 @@ nav ul li a.nav-highlight {
     }
 
     /* Sections General */
-    section {
+    section:not(.hero-sticky) {
         padding: 80px 0 !important;
     }
 
@@ -1598,9 +1598,9 @@ nav ul li a.nav-highlight {
 
     /* Hero */
     .hero-sticky {
-        height: auto;
+        height: 100vh;
         min-height: 100vh;
-        padding-top: 120px;
+        padding-top: 0;
     }
 
     .main-title {
