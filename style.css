@@ -616,27 +616,29 @@ nav ul li a.nav-highlight {
 .stat-number {
     font-size: 4.5rem;
     font-weight: 800;
-    color: #ffffff;
+    color: #ffffff !important;
     line-height: 1;
-    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-    /* Add glow */
+    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5) !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 10;
 }
 
 .stat-suffix,
 .stat-sep {
     font-size: 2.2rem;
-    color: #ffcc33;
+    color: #ffcc33 !important;
     font-weight: 700;
     margin-left: 5px;
-    text-shadow: 0 5px 15px rgba(255, 204, 51, 0.4);
-    /* Add glow */
+    text-shadow: 0 5px 15px rgba(255, 204, 51, 0.6) !important;
+    opacity: 1 !important;
 }
 
 .stat-label {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.7) !important;
     font-weight: 700;
 }
 
