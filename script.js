@@ -505,13 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .to('.hero-subtitle', { opacity: 1, y: 0, duration: 1.5 }, "-=1.5")
             .to(cards, {
                 x: (i) => {
-                    const isMobile = window.innerWidth <= 768;
-                    const positions = isMobile ? [
-                        -window.innerWidth * 0.26,
-                        -window.innerWidth * 0.08,
-                        window.innerWidth * 0.08,
-                        window.innerWidth * 0.26
-                    ] : [
+                    const positions = [
                         -window.innerWidth * 0.25,
                         -window.innerWidth * 0.08,
                         window.innerWidth * 0.12,
@@ -520,8 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     return positions[i];
                 },
                 y: (i) => {
-                    const isMobile = window.innerWidth <= 768;
-                    return isMobile ? [-80, 50, -60, 70][i] : [-140, 100, -120, 130][i];
+                    return [-140, 100, -120, 130][i];
                 },
                 rotate: (i) => [-15, 6, -8, 14][i],
                 opacity: 1,
