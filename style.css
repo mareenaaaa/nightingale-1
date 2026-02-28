@@ -1528,7 +1528,10 @@ nav ul li a.nav-highlight {
     }
 
     .stats-grid-modern {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+        gap: 20px;
     }
 
     .travel-destination-grid,
@@ -1629,8 +1632,9 @@ nav ul li a.nav-highlight {
     /* Stats */
     .stats-grid-modern {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        max-width: 100%;
         margin: 0 auto;
+        gap: 15px;
     }
 
     .stat-number {
