@@ -8,6 +8,7 @@
     <meta name="description"
         content="Luxury travel agency specializing in premium experiences and cinematic journeys around the world.">
     <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="reviews.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,9 +31,10 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="packages.html">Packages</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#destinations">Travels</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -162,7 +164,7 @@
                     <div class="about-text-content">
                         <span class="section-label">BEYOND IMAGINATION</span>
                         <h2 class="section-title">The Art of <br>Curated Journeys</h2>
-                        <p class="about-description">Since 2011, Nightingale Holidays has been redefining the standard
+                        <p class="about-description">Nightingale Holidays has been redefining the standard
                             of luxury travel. We don't just book trips; we architect experiences that linger in the
                             soul, blending local authenticity with world-class refinement.</p>
 
@@ -198,6 +200,23 @@
                 <div class="section-header-center">
                     <h2 class="section-title">Premium Travel Packages</h2>
                     <p class="section-subheading">Handcrafted journeys designed with heart.</p>
+                </div>
+
+                <!-- Premium Category Links -->
+                <div class="home-cat-buttons"
+                    style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; margin-bottom: 50px; flex-wrap: wrap; padding: 0 15px;">
+                    <a href="packages.html?filter=international" class="home-cat-btn"
+                        style="background: linear-gradient(135deg, #131317, #1f1f28); color: #fff; text-decoration: none; padding: 16px 35px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: all 0.3s ease; display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-globe-americas" style="color: #49ebd0; font-size: 1.3rem;"></i>
+                        <span>International
+                            Packages</span>
+                    </a>
+                    <a href="packages.html?filter=domestic" class="home-cat-btn"
+                        style="background: linear-gradient(135deg, #131317, #1f1f28); color: #fff; text-decoration: none; padding: 16px 35px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: all 0.3s ease; display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-map-marked-alt" style="color: #ffcc33; font-size: 1.3rem;"></i> <span>Domestic
+                            &
+                            Pilgrimage</span>
+                    </a>
                 </div>
 
                 <div class="flip-card-grid" id="home-packages-grid">
@@ -773,7 +792,8 @@
                         <!-- Card 8 -->
                         <div class="mps-card" data-index="7">
                             <div class="mps-img"><img src="mookambika.jpg" onerror="this.src='home.jpg';"
-                                    alt="Mookambika"></div>
+                                    alt="Mookambika">
+                            </div>
                             <div class="mps-content">
                                 <h3>Mookambika Package</h3>
                                 <p>Divine spiritual experience.</p>
@@ -799,7 +819,8 @@
                         <!-- Card 10 -->
                         <div class="mps-card" data-index="9">
                             <div class="mps-img"><img src="navagraha.jpg" onerror="this.src='home.jpg';"
-                                    alt="Navagraha"></div>
+                                    alt="Navagraha">
+                            </div>
                             <div class="mps-content">
                                 <h3>Navagraha Temple</h3>
                                 <p>Visit all nine sacred temples.</p>
@@ -863,7 +884,8 @@
                         <!-- Card 15 -->
                         <div class="mps-card" data-index="14">
                             <div class="mps-img"><img src="hyderabad.jpg" onerror="this.src='home.jpg';"
-                                    alt="Hyderabad"></div>
+                                    alt="Hyderabad">
+                            </div>
                             <div class="mps-content">
                                 <h3>Hyderabad</h3>
                                 <p>Discover the heritage of the Nizam.</p>
@@ -914,7 +936,8 @@
                         <!-- Card 19 -->
                         <div class="mps-card" data-index="18">
                             <div class="mps-img"><img src="navagraha.jpg" onerror="this.src='home.jpg';"
-                                    alt="Nalambalam"></div>
+                                    alt="Nalambalam">
+                            </div>
                             <div class="mps-content">
                                 <h3>Nalambalam Pilgrimage</h3>
                                 <p>Sacred four-temple Rama circuit.</p>
@@ -1074,8 +1097,174 @@
                         <img src="travel2.jpeg" alt="Travel 2">
                     </div>
                     <div class="travel-img-only">
-                        <img src="travel3.jpeg" alt="Travel 3">
+                        <img src="car.jpeg" alt="Car">
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section (Home Page Preview) -->
+        <section id="reviews" class="bento-section" style="padding-top: 100px; padding-bottom: 80px;">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-label">TESTIMONIALS</span>
+                    <h2 class="section-title">What Our Travelers Say</h2>
+                    <div style="margin-top: 20px; color: #ffcc33; font-size: 1.5rem; letter-spacing: 3px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div style="color: var(--text-dim); margin-top: 10px; font-weight: 500; font-size: 1.1rem;">
+                        Based on 100+ Happy Travelers
+                    </div>
+                </div>
+
+                <div class="bento-grid" style="margin-top: 50px;">
+
+                    <!-- Card 1 (Anjali) -->
+                    <div class="bento-card card-1 gsap-card">
+                        <div class="quote-icon quote-top-left">“</div>
+                        <div class="avatar-circle avatar-right-overlap bg-purple">A</div>
+                        <div class="b-text">
+                            Wonderful service from start to finish. Our Munnar trip was perfectly organized and deeply
+                            relaxing.
+                        </div>
+                        <div class="b-author">Anjali Nair <span>Verified Traveler</span></div>
+                    </div>
+
+                    <!-- Card 2 (Arun) -->
+                    <div class="bento-card card-2 gsap-card">
+                        <div class="avatar-circle avatar-top-center bg-orange">A</div>
+                        <div class="b-stars center">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="b-title">I really appreciate!!</div>
+                        <div class="b-text">
+                            Best travel agency in Kerala. Temple tour was smooth and comfortable. Every detail was
+                            planned meticulously.
+                        </div>
+                        <div class="b-author">Arun Kumar <span>@arunkumar</span></div>
+                        <div class="quote-icon quote-bottom-right">“</div>
+                    </div>
+
+                    <!-- Card 3 (Priya) (Removed Image) -->
+                    <div class="bento-card card-3 gsap-card" style="padding: 30px; justify-content: center;">
+                        <div class="avatar-circle avatar-top-center bg-green" style="top: -30px;">P</div>
+                        <div class="b-text">
+                            "Highly professional team. Houseboat experience was unforgettable and the scenery was
+                            breathtaking. Everything was managed perfectly throughout our stay."
+                        </div>
+                        <div class="b-author" style="margin-top: 20px;">Priya Thomas <span>Premium Client</span></div>
+                    </div>
+
+                    <!-- Card 4 (Mohammed) (International) -->
+                    <div class="bento-card card-4 gsap-card">
+                        <div class="avatar-circle avatar-top-center bg-blue">M</div>
+                        <div class="b-title">Amazing Dubai Trip!</div>
+                        <div class="b-stars center">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="b-text">
+                            Excellent coordination for our international package to Dubai. Perfectly planned itinerary
+                            and very safe. Will absolutely book again!
+                        </div>
+                    </div>
+
+                    <!-- Card 5 (Riya) (Cost Effective) -->
+                    <div class="bento-card card-5 gsap-card">
+                        <div class="avatar-circle avatar-right-overlap bg-red">R</div>
+                        <div class="b-title">Cost-Effective</div>
+                        <div class="b-text">
+                            We were amazed at how affordable and cost-effective their premium packages are. Exceptional
+                            luxury without breaking the bank!
+                        </div>
+                        <div class="b-author">Riya Menon <span>Verified Traveler</span></div>
+                    </div>
+
+                    <!-- Card 10 (Suresh) NEW -->
+                    <div class="bento-card card-10 gsap-card">
+                        <div class="avatar-circle avatar-top-center bg-teal">S</div>
+                        <div class="b-stars center">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="b-title">Flawless Planning</div>
+                        <div class="b-text">
+                            I cannot express how perfect the whole corporate team retreat was. They are absolutely the
+                            best in the market.
+                        </div>
+                        <div class="b-author">Suresh K. <span>@suresh_k</span></div>
+                        <div class="quote-icon quote-bottom-right">“</div>
+                    </div>
+
+                    <!-- Card 11 (Vani) NEW -->
+                    <div class="bento-card card-11 gsap-card">
+                        <div class="avatar-circle avatar-top-center bg-orange">V</div>
+                        <div class="b-text">
+                            "If you are looking for premium luxury in south India, this is it. Absolute elegance and
+                            care in every detail."
+                        </div>
+                        <div class="b-author" style="margin-top: 20px;">Vani Roy <span>Premium Client</span></div>
+                    </div>
+
+                    <!-- Card 6 (Sneha) (Removed Side Image) -->
+                    <div class="bento-card card-6 gsap-card" style="display: block; padding: 30px;">
+                        <div class="quote-icon quote-top-left"
+                            style="font-size: 4rem; color: #fbbc04; top: 10px; left: 15px; z-index: 0; opacity: 0.2;">“
+                        </div>
+                        <div style="position: relative; z-index: 1;">
+                            <div class="b-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="b-text" style="font-size: 1.1rem; margin-top: 15px;">
+                                The team went above and beyond for our anniversary trip to Wayanad. Highly recommended!
+                            </div>
+                            <div class="b-author" style="margin-top: 20px;">Sneha Varghese <span>@sneha_travels</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 (David) (Removed background image from avatar) -->
+                    <div class="bento-card card-7 gsap-card">
+                        <div class="b-title">I was very impressed!</div>
+                        <div class="b-text" style="max-width: 80%; margin: 0 auto;">
+                            A truly premium experience. The personalized itinerary made our family vacation stress-free
+                            and purely enjoyable.
+                        </div>
+                        <div class="b-author" style="margin-top: 15px;">David John</div>
+
+                        <div class="multi-avatars">
+                            <div class="avatar-circle bg-teal">D</div>
+                            <div class="avatar-circle bg-dark">A</div>
+                            <div class="avatar-circle bg-pink">M</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 (Karthik) -->
+                    <div class="bento-card card-8 speech-bubble gsap-card">
+                        <div class="avatar-circle avatar-top-center bg-green">K</div>
+                        <div class="b-stars center">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="b-text">
+                            Beautiful properties and very polite drivers. They took care of every little detail during
+                            our South India temple run.
+                        </div>
+                        <div class="b-author">Karthik Raj <span>Customer</span></div>
+                    </div>
+
+                    <!-- Card 9 (View More) -->
+                    <a href="reviews.html" class="bento-card card-9 view-more-card gsap-card">
+                        <div>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="b-title">View More</div>
+                            <div class="b-text">Read 100+ Reviews</div>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -1108,6 +1297,7 @@
                     <p><a href="#destinations">Worldwide</a></p>
                     <p><a href="#packages">Tour Packages</a></p>
                     <p><a href="#gallery">Visual Stories</a></p>
+                    <p><a href="reviews.html">Customer Reviews</a></p>
                 </div>
                 <!-- Col 3: Offices -->
                 <div class="footer-info">
@@ -1191,6 +1381,8 @@
                     stagger: 0.3,
                     ease: "power4.out"
                 });
+
+
             }
 
             // Mobile tap to flip

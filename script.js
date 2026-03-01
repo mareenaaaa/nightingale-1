@@ -496,8 +496,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Initial Set
-        gsap.set('.card-1, .card-2', { x: -window.innerWidth * 0.8, opacity: 0, rotate: -25 });
-        gsap.set('.card-3, .card-4', { x: window.innerWidth * 0.8, opacity: 0, rotate: 25 });
+        gsap.set('.card-float.card-1, .card-float.card-2', { x: -window.innerWidth * 0.8, opacity: 0, rotate: -25 });
+        gsap.set('.card-float.card-3, .card-float.card-4', { x: window.innerWidth * 0.8, opacity: 0, rotate: 25 });
         gsap.set('.main-title', { opacity: 0, scale: 0.9, filter: 'blur(20px)' });
 
         introTl
@@ -514,6 +514,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     return positions[i];
                 },
                 y: (i) => {
+                    if (window.innerWidth <= 768) {
+                        return [-60, 80, -40, 100][i];
+                    }
                     return [-140, 100, -120, 130][i];
                 },
                 rotate: (i) => [-15, 6, -8, 14][i],
@@ -539,9 +542,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mainTitle) scrollTl.to(mainTitle, { y: -100, opacity: 0.2, scale: 0.9, filter: 'blur(10px)' }, 0);
 
         cards.forEach((card, i) => {
+            const yMovement = window.innerWidth <= 768 ? 150 : 400;
+            const xMovement = window.innerWidth <= 768 ? 40 : 100;
             scrollTl.to(card, {
-                y: (i % 2 === 0) ? "-=400" : "+=400",
-                x: (i % 2 === 0) ? "+=100" : "-=100",
+                y: (i % 2 === 0) ? `-=${yMovement}` : `+=${yMovement}`,
+                x: (i % 2 === 0) ? `+=${xMovement}` : `-=${xMovement}`,
                 rotate: (i % 2 === 0) ? "+=15" : "-=15",
                 ease: "none"
             }, 0);
@@ -636,6 +641,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Reviews Bento Grid Scroll Reveal (Universal) ---
+    gsap.utils.toArray('.bento-grid').forEach(grid => {
+        const cards = grid.querySelectorAll('.gsap-card');
+        if (cards.length > 0) {
+            gsap.from(cards, {
+                scrollTrigger: {
+                    trigger: grid,
+                    start: 'top 85%'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: 'power3.out',
+                onComplete: function () {
+                    gsap.set(cards, { clearProps: "all" });
+                }
+            });
+        }
+    });
+
     // --- Infinite Gallery Cycle ---
     const galleryTrack = document.querySelector('.gallery-track');
     if (galleryTrack) {
@@ -728,4 +754,99 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById('package-modal');
         if (e.target === modal) closeModal();
     });
+
+    // --- Premium Background Animation ---
+    const bgCanvas = document.createElement('canvas');
+    bgCanvas.id = 'bg-canvas';
+    bgCanvas.style.position = 'fixed';
+    bgCanvas.style.top = '0';
+    bgCanvas.style.left = '0';
+    bgCanvas.style.width = '100vw';
+    bgCanvas.style.height = '100vh';
+    bgCanvas.style.pointerEvents = 'none';
+    bgCanvas.style.zIndex = '-1';
+    document.body.appendChild(bgCanvas);
+
+    const bgCtx = bgCanvas.getContext('2d');
+    let width, height;
+
+    function resizeBg() {
+        width = bgCanvas.width = window.innerWidth;
+        height = bgCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeBg);
+    resizeBg();
+
+    const particles = [];
+
+    // Ambient luxury background particles (slow, glowing)
+    const numBgParticles = 60;
+    for (let i = 0; i < numBgParticles; i++) {
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.15, // Very slow movement
+            vy: (Math.random() - 0.5) * 0.15,
+            size: Math.random() * 3.5 + 1.5,
+            baseAlpha: Math.random() * 0.3 + 0.1,
+            pulseOffset: Math.random() * Math.PI * 2
+        });
+    }
+
+    function animateBg() {
+        // Subtle clear to allow soft trailing if desired, but clearRect is sharper
+        bgCtx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+            let p = particles[i];
+
+            p.x += p.vx;
+            p.y += p.vy;
+            p.pulseOffset += 0.015; // Speed of glowing pulse
+
+            // Wrap around edges smoothly
+            if (p.x < -20) p.x = width + 20;
+            if (p.x > width + 20) p.x = -20;
+            if (p.y < -20) p.y = height + 20;
+            if (p.y > height + 20) p.y = -20;
+
+            // Calculate glowing opacity
+            const currentAlpha = p.baseAlpha + Math.sin(p.pulseOffset) * 0.1;
+            const safeAlpha = Math.max(0, Math.min(1, currentAlpha));
+
+            bgCtx.save();
+            bgCtx.beginPath();
+            bgCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            bgCtx.fillStyle = `rgba(212, 175, 55, ${safeAlpha})`;
+
+            // Premium glow effect
+            bgCtx.shadowBlur = p.size * 5;
+            bgCtx.shadowColor = `rgba(212, 175, 55, ${safeAlpha * 1.5})`;
+
+            bgCtx.fill();
+            bgCtx.restore();
+
+            // Draw premium connecting lines
+            for (let j = i + 1; j < particles.length; j++) {
+                let p2 = particles[j];
+                let dx = p.x - p2.x;
+                let dy = p.y - p2.y;
+                let dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < 150) { // Connection threshold
+                    bgCtx.beginPath();
+                    let lineAlpha = (1 - dist / 150) * 0.15; // Fade out as they get further
+                    bgCtx.strokeStyle = `rgba(212, 175, 55, ${lineAlpha})`;
+                    bgCtx.lineWidth = 1;
+                    bgCtx.moveTo(p.x, p.y);
+                    bgCtx.lineTo(p2.x, p2.y);
+                    bgCtx.stroke();
+                }
+            }
+        }
+
+        requestAnimationFrame(animateBg);
+    }
+
+    animateBg();
 });

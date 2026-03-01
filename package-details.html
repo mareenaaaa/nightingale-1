@@ -26,6 +26,19 @@
             background: linear-gradient(180deg, rgba(14, 21, 17, 1) 0%, rgba(14, 21, 17, 0) 100%);
         }
 
+        .details-hero h1 {
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .details-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         .details-img-container {
             width: 100%;
             height: 50vh;
@@ -206,6 +219,22 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        @media (max-width: 768px) {
+            .details-hero {
+                padding-top: 90px;
+                padding-bottom: 20px;
+            }
+
+            .details-hero h1 {
+                font-size: 2.2rem;
+                margin-bottom: 12px;
+            }
+
+            .details-hero p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -220,9 +249,10 @@
                 <ul>
                     <li><a href="index.html#home">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#packages">Packages</a></li>
+                    <li><a href="packages.html">Packages</a></li>
                     <li><a href="index.html#gallery">Gallery</a></li>
                     <li><a href="index.html#destinations">Travels</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -270,6 +300,7 @@
                     <p><a href="index.html#about">Our Story</a></p>
                     <p><a href="index.html#destinations">Worldwide</a></p>
                     <p><a href="index.html#packages">Tour Packages</a></p>
+                    <p><a href="reviews.html">Customer Reviews</a></p>
                 </div>
                 <!-- Col 3: Offices -->
                 <div class="footer-info">
@@ -428,8 +459,8 @@
                 mainContainer.innerHTML = `
                     <section class="details-hero container">
                         <span class="section-label">SIGNATURE ITINERARY</span>
-                        <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); font-family: 'Playfair Display', serif; margin-bottom: 20px;">${displayTitle}</h1>
-                        <p style="font-size: 1.2rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">${descriptions[packageId] || 'Experience an unforgettable journey curated just for you.'}</p>
+                        <h1>${displayTitle}</h1>
+                        <p>${descriptions[packageId] || 'Experience an unforgettable journey curated just for you.'}</p>
                     </section>
 
                     <section class="container">
