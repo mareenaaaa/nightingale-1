@@ -32,6 +32,20 @@ body {
     overflow-x: hidden;
     cursor: none;
     /* Hide default cursor */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .custom-cursor {
@@ -649,7 +663,7 @@ nav ul li a.nav-highlight {
 /* --- PREMIUM ABOUT SECTION --- */
 .about-premium {
     padding: 0 0 100px 0;
-    background: #050505;
+    background: transparent;
     margin-top: -1px;
     /* Overlap slightly to prevent sub-pixel gaps */
 }
@@ -777,7 +791,7 @@ nav ul li a.nav-highlight {
 /* --- PREMIUM DESTINATIONS SECTION --- */
 .destinations-premium {
     padding: 140px 0;
-    background: #050505;
+    background: transparent;
 }
 
 .section-header-center {
@@ -965,7 +979,7 @@ nav ul li a.nav-highlight {
 /* --- PREMIUM GALLERY SECTION --- */
 .gallery-premium {
     padding: 140px 0;
-    background: #080808;
+    background: transparent;
     overflow: hidden;
     /* Hide overflow for the slider */
 }
@@ -1106,7 +1120,7 @@ nav ul li a.nav-highlight {
 /* --- PREMIUM PACKAGES SECTION --- */
 .packages-premium {
     padding: 140px 0;
-    background: #080808;
+    background: transparent;
 }
 
 .package-grid-modern {
@@ -1235,7 +1249,7 @@ nav ul li a.nav-highlight {
 /* --- PREMIUM FOOTER --- */
 .contact-footer {
     padding: 120px 0 60px;
-    background: #050505;
+    background: transparent;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 

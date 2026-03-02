@@ -755,7 +755,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === modal) closeModal();
     });
 
-    // --- Premium Background Animation ---
+    // --- Premium Background Animation (Enhanced) ---
     const bgCanvas = document.createElement('canvas');
     bgCanvas.id = 'bg-canvas';
     bgCanvas.style.position = 'fixed';
@@ -764,80 +764,122 @@ document.addEventListener('DOMContentLoaded', () => {
     bgCanvas.style.width = '100vw';
     bgCanvas.style.height = '100vh';
     bgCanvas.style.pointerEvents = 'none';
-    bgCanvas.style.zIndex = '-1';
+    bgCanvas.style.zIndex = '-2'; // Behind everything
     document.body.appendChild(bgCanvas);
 
     const bgCtx = bgCanvas.getContext('2d');
     let width, height;
+    let mouseX = 0, mouseY = 0;
 
     function resizeBg() {
         width = bgCanvas.width = window.innerWidth;
         height = bgCanvas.height = window.innerHeight;
     }
     window.addEventListener('resize', resizeBg);
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
     resizeBg();
 
     const particles = [];
+    const orbs = [];
 
-    // Ambient luxury background particles (slow, glowing)
-    const numBgParticles = 60;
+    // Ambient luxury background particles
+    const numBgParticles = 80;
     for (let i = 0; i < numBgParticles; i++) {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.15, // Very slow movement
-            vy: (Math.random() - 0.5) * 0.15,
-            size: Math.random() * 3.5 + 1.5,
+            vx: (Math.random() - 0.5) * 0.2,
+            vy: (Math.random() - 0.5) * 0.2,
+            size: Math.random() * 2 + 1,
             baseAlpha: Math.random() * 0.3 + 0.1,
             pulseOffset: Math.random() * Math.PI * 2
         });
     }
 
-    function animateBg() {
-        // Subtle clear to allow soft trailing if desired, but clearRect is sharper
-        bgCtx.clearRect(0, 0, width, height);
+    // Large Soft Cinematic Orbs
+    const numOrbs = 4;
+    const orbColors = ['rgba(212, 175, 55, 0.05)', 'rgba(79, 138, 255, 0.03)', 'rgba(73, 235, 208, 0.04)', 'rgba(55, 83, 184, 0.03)'];
+    for (let i = 0; i < numOrbs; i++) {
+        orbs.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            radius: Math.random() * 400 + 300,
+            color: orbColors[i % orbColors.length]
+        });
+    }
 
+    function animateBg() {
+        // Clear with a slight trail
+        bgCtx.fillStyle = 'rgba(4, 13, 26, 0.15)'; // Match deep-navy
+        bgCtx.fillRect(0, 0, width, height);
+
+        // Draw Orbs first (furthest back)
+        orbs.forEach(o => {
+            o.x += o.vx;
+            o.y += o.vy;
+
+            if (o.x < -o.radius) o.x = width + o.radius;
+            if (o.x > width + o.radius) o.x = -o.radius;
+            if (o.y < -o.radius) o.y = height + o.radius;
+            if (o.y > height + o.radius) o.y = -o.radius;
+
+            const gradient = bgCtx.createRadialGradient(o.x, o.y, 0, o.x, o.y, o.radius);
+            gradient.addColorStop(0, o.color);
+            gradient.addColorStop(1, 'rgba(4, 13, 26, 0)');
+
+            bgCtx.beginPath();
+            bgCtx.arc(o.x, o.y, o.radius, 0, Math.PI * 2);
+            bgCtx.fillStyle = gradient;
+            bgCtx.fill();
+        });
+
+        // Draw Particles
         for (let i = 0; i < particles.length; i++) {
             let p = particles[i];
 
+            // Subtle interaction with mouse
+            let dxm = p.x - mouseX;
+            let dym = p.y - mouseY;
+            let distM = Math.sqrt(dxm * dxm + dym * dym);
+            if (distM < 200) {
+                p.x += dxm * 0.01;
+                p.y += dym * 0.01;
+            }
+
             p.x += p.vx;
             p.y += p.vy;
-            p.pulseOffset += 0.015; // Speed of glowing pulse
+            p.pulseOffset += 0.01;
 
-            // Wrap around edges smoothly
             if (p.x < -20) p.x = width + 20;
             if (p.x > width + 20) p.x = -20;
             if (p.y < -20) p.y = height + 20;
             if (p.y > height + 20) p.y = -20;
 
-            // Calculate glowing opacity
             const currentAlpha = p.baseAlpha + Math.sin(p.pulseOffset) * 0.1;
             const safeAlpha = Math.max(0, Math.min(1, currentAlpha));
 
-            bgCtx.save();
             bgCtx.beginPath();
             bgCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
             bgCtx.fillStyle = `rgba(212, 175, 55, ${safeAlpha})`;
-
-            // Premium glow effect
-            bgCtx.shadowBlur = p.size * 5;
-            bgCtx.shadowColor = `rgba(212, 175, 55, ${safeAlpha * 1.5})`;
-
             bgCtx.fill();
-            bgCtx.restore();
 
-            // Draw premium connecting lines
+            // Connections
             for (let j = i + 1; j < particles.length; j++) {
                 let p2 = particles[j];
                 let dx = p.x - p2.x;
                 let dy = p.y - p2.y;
                 let dist = Math.sqrt(dx * dx + dy * dy);
 
-                if (dist < 150) { // Connection threshold
+                if (dist < 150) {
                     bgCtx.beginPath();
-                    let lineAlpha = (1 - dist / 150) * 0.15; // Fade out as they get further
+                    let lineAlpha = (1 - dist / 150) * 0.1;
                     bgCtx.strokeStyle = `rgba(212, 175, 55, ${lineAlpha})`;
-                    bgCtx.lineWidth = 1;
+                    bgCtx.lineWidth = 0.5;
                     bgCtx.moveTo(p.x, p.y);
                     bgCtx.lineTo(p2.x, p2.y);
                     bgCtx.stroke();
