@@ -703,7 +703,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div class="item-details">
                                 <h4 style="font-size: 0.95rem; margin-bottom: 3px;">Experience Highlight</h4>
-                                <p style="font-size: 0.85rem; opacity: 0.8; line-height: 1.5;">${item.content}</p>
+                                <p style="font-size: 0.85rem; line-height: 1.5;">${item.content}</p>
                             </div>
                         </div>
                     `).join('')}
