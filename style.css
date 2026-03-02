@@ -3,8 +3,8 @@
 :root {
     --deep-navy: #040d1a;
     --navy-darker: #020811;
-    --luxury-gold: #ffcc33;
-    --gold-glow: rgba(255, 204, 51, 0.4);
+    --luxury-gold: #ffffff;
+    --gold-glow: rgba(255, 255, 255, 0.4);
     --text-white: #ffffff;
     --text-dim: #ffffff;
     --glass-bg: rgba(255, 255, 255, 0.05);
@@ -17,6 +17,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: var(--transition-medium);
 }
 
 html {

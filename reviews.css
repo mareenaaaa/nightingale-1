@@ -52,7 +52,7 @@ body.reviews-page {
 }
 
 .rating-stars {
-    color: #ffcc33;
+    color: #ffffff;
     font-size: 1.8rem;
     letter-spacing: 5px;
 }
@@ -201,7 +201,7 @@ body.reviews-page {
 }
 
 .b-stars {
-    color: #fbbc04;
+    color: #ffffff;
     font-size: 1.1rem;
     margin-bottom: 15px;
     letter-spacing: 2px;
@@ -374,7 +374,7 @@ body.reviews-page {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffcc33;
+    background: #ffffff;
     color: #111;
     border: none;
     text-decoration: none;

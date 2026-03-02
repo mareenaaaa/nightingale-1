@@ -39,18 +39,12 @@ body.packages-portfolio-page {
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, #4f8aff, #49ebd0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
     display: block;
 }
 
 .gradient-secondary {
-    background: linear-gradient(90deg, #3753b8, #2ac2aa);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
 }
 
 /* Filter Pills */
