@@ -4,7 +4,8 @@
     --deep-navy: #040d1a;
     --navy-darker: #020811;
     --luxury-gold: #ffffff;
-    --gold-glow: rgba(255, 255, 255, 0.4);
+    --whatsapp-yellow: #ffcc33;
+    --gold-glow: rgba(255, 204, 51, 0.4);
     --text-white: #ffffff;
     --text-dim: #ffffff;
     --glass-bg: rgba(255, 255, 255, 0.05);
@@ -54,23 +55,40 @@ body::before {
     z-index: -1;
 }
 
+/* --- Custom Cursor & Sparkles --- */
 .custom-cursor {
-    width: 20px;
-    height: 20px;
-    background: var(--luxury-gold);
+    width: 8px;
+    height: 8px;
+    background: #fff;
     border-radius: 50%;
     position: fixed;
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
+    z-index: 10000;
+    box-shadow: 0 0 15px #fff, 0 0 30px #ffcc33;
     transition: transform 0.1s ease;
 }
 
+.sparkle-particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: #ffcc33;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    filter: blur(1px);
+    box-shadow: 0 0 10px #ffcc33;
+}
+
 a:hover~.custom-cursor,
-button:hover~.custom-cursor {
+button:hover~.custom-cursor,
+.card-float:hover~.custom-cursor {
     transform: scale(2.5);
+    background: #ffcc33;
 }
 
 h1,
@@ -80,7 +98,15 @@ h3 {
 }
 
 section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 180px;
+    padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 100px;
+        padding-top: 60px;
+    }
 }
 
 .container {
@@ -180,7 +206,7 @@ nav ul li a:hover {
 
 .btn-enquire {
     padding: 12px 28px;
-    background: var(--luxury-gold);
+    background: var(--whatsapp-yellow);
     color: var(--deep-navy);
     border-radius: 50px;
     text-decoration: none;
@@ -199,7 +225,7 @@ nav ul li a:hover {
 }
 
 .btn-primary {
-    background: var(--luxury-gold);
+    background: var(--whatsapp-yellow);
     color: var(--deep-navy);
     padding: 15px 30px;
     border-radius: 50px;
@@ -780,8 +806,9 @@ nav ul li a.nav-highlight {
 .btn-outline-premium {
     display: inline-block;
     padding: 18px 45px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: #ffcc33;
+    border: 1px solid #ffcc33;
+    color: #111;
     text-decoration: none;
     font-weight: 600;
     border-radius: 100px;
@@ -789,9 +816,10 @@ nav ul li a.nav-highlight {
 }
 
 .btn-outline-premium:hover {
-    background: #fff;
-    color: #000;
-    border-color: #fff;
+    background: #e6b800;
+    color: #111;
+    border-color: #e6b800;
+    transform: translateY(-3px);
 }
 
 /* --- PREMIUM DESTINATIONS SECTION --- */
@@ -1458,7 +1486,7 @@ nav ul li a.nav-highlight {
     display: block;
     width: 100%;
     padding: 22px;
-    background: #ffcc33;
+    background: var(--whatsapp-yellow);
     color: #000;
     text-align: center;
     text-decoration: none;
@@ -1865,7 +1893,7 @@ nav ul li a.nav-highlight {
     justify-content: center;
     gap: 12px;
     padding: 18px 35px;
-    background: var(--luxury-gold);
+    background: var(--whatsapp-yellow);
     color: var(--deep-navy);
     text-decoration: none;
     border-radius: 50px;
@@ -2104,7 +2132,7 @@ nav ul li a.nav-highlight {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: var(--luxury-gold);
+    background: var(--whatsapp-yellow);
     color: var(--deep-navy) !important;
     text-align: center;
     padding: 12px 20px;

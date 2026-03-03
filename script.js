@@ -412,6 +412,33 @@ window.packageData = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Reliable Hash Navigation ---
+    const scrollToHash = () => {
+        const hash = window.location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                // Wait slightly for GSAP and layout
+                setTimeout(() => {
+                    const headerOffset = 180;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }, 1000);
+            }
+        }
+    };
+
+    // Initial call
+    scrollToHash();
+    window.addEventListener('load', scrollToHash);
+    // Also handle hash changes without page refresh
+    window.addEventListener('hashchange', scrollToHash);
+
     // --- Header Scroll Effect ---
     const header = document.querySelector('header');
     if (header) {
@@ -420,21 +447,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Custom Cursor ---
-    const existingCursor = document.querySelector('.custom-cursor');
-    const cursor = existingCursor || document.createElement('div');
-    if (!existingCursor) {
+    // --- Custom Cursor & Sparkles Trail ---
+    const cursor = document.querySelector('.custom-cursor') || document.createElement('div');
+    if (!cursor.parentElement) {
         cursor.className = 'custom-cursor';
         document.body.appendChild(cursor);
     }
 
+    let lastX = 0;
+    let lastY = 0;
+    let isMoving = false;
+
     document.addEventListener('mousemove', (e) => {
+        isMoving = true;
+
+        // Move the main cursor
         gsap.to(cursor, {
             x: e.clientX,
             y: e.clientY,
-            duration: 0.1
+            duration: 0.1,
+            ease: "power2.out"
         });
+
+        // Spawn sparkles if moved enough
+        const dist = Math.hypot(e.clientX - lastX, e.clientY - lastY);
+        if (dist > 15) {
+            createSparkle(e.clientX, e.clientY);
+            lastX = e.clientX;
+            lastY = e.clientY;
+        }
     });
+
+    function createSparkle(x, y) {
+        const particle = document.createElement('div');
+        particle.className = 'sparkle-particle';
+        document.body.appendChild(particle);
+
+        const size = Math.random() * 6 + 2;
+        const angle = Math.random() * Math.PI * 2;
+        const velocity = Math.random() * 30 + 10;
+        const destinationX = x + Math.cos(angle) * velocity;
+        const destinationY = y + Math.sin(angle) * velocity;
+
+        gsap.set(particle, {
+            x: x,
+            y: y,
+            width: size,
+            height: size,
+            opacity: 1,
+            scale: 1
+        });
+
+        gsap.to(particle, {
+            x: destinationX,
+            y: destinationY,
+            opacity: 0,
+            scale: 0,
+            duration: 0.8 + Math.random() * 0.4,
+            ease: "power2.out",
+            onComplete: () => {
+                particle.remove();
+            }
+        });
+    }
 
     // --- Mobile Nav Logic ---
     const mobileToggle = document.querySelector('.mobile-nav-toggle');
@@ -461,18 +536,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.3 // Trigger when 30% of the section is visible
+        threshold: 0.1 // More sensitive for mobile and large sections
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
                 const id = entry.target.getAttribute('id');
-                // Remove highlight from all links
+                // Avoid highlighting home when we've clearly scrolled past the hero
+                if (id === 'home' && window.scrollY > window.innerHeight * 0.5) return;
+
                 document.querySelectorAll('header nav ul li a').forEach(link => {
+                    const href = link.getAttribute('href');
                     link.classList.remove('nav-highlight');
-                    // Add highlight if the href matches the intersecting section id
-                    if (link.getAttribute('href') === `#${id}` || link.getAttribute('href') === `index.html#${id}`) {
+                    if (href === `#${id}` || href === `index.html#${id}` || (href === 'index.html' && id === 'home') || (href === 'packages.html' && id === 'packages')) {
                         link.classList.add('nav-highlight');
                     }
                 });

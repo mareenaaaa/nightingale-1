@@ -374,8 +374,8 @@ body.reviews-page {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff;
-    color: #111;
+    background: #ffcc33 !important;
+    color: #111 !important;
     border: none;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -400,7 +400,7 @@ body.reviews-page {
 }
 
 .card-9.view-more-card:hover {
-    background: #fff;
+    background: #e6b800 !important;
     transform: translateY(-5px) !important;
     box-shadow: 0 15px 30px rgba(255, 204, 51, 0.4);
 }

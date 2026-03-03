@@ -1,95 +1,95 @@
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const grid = document.getElementById('home-packages-grid');
-            const packageData = window.packageData;
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('home-packages-grid');
+    const packageData = window.packageData;
 
-            const images = {
-                munnar: 'munnar.jfif',
-                munnar_alleppey: 'alapuzha.jpg',
-                honeymoon: 'Mararikualm beach.webp',
-                south_india: 'madurai.jpg',
-                mookambika: 'mookambika.jpg',
-                nalambalam: 'thiruvanthapuram.jpg',
-                hyderabad: 'hyderabad.jpg',
-                mysore: 'mysore.jpg',
-                ooty: 'ooty.jpg',
-                kodaikanal: 'kodai.jpg',
-                navagraha: 'image1.jpg',
-                trivandrum: 'thiruvanthapuram.jpg',
-                wayanad: 'alapuzha.jpg',
-                guruvayoor: 'packages/PACKAGES/Guruvayoor/guruvayur-temple.jpg',
-                kannur: 'packages/PACKAGES/Kannur Temple Visit/mridanga saileswari.jpg'
-            };
+    const images = {
+        munnar: 'munnar.jfif',
+        munnar_alleppey: 'alapuzha.jpg',
+        honeymoon: 'Mararikualm beach.webp',
+        south_india: 'madurai.jpg',
+        mookambika: 'mookambika.jpg',
+        nalambalam: 'thiruvanthapuram.jpg',
+        hyderabad: 'hyderabad.jpg',
+        mysore: 'mysore.jpg',
+        ooty: 'ooty.jpg',
+        kodaikanal: 'kodai.jpg',
+        navagraha: 'image1.jpg',
+        trivandrum: 'thiruvanthapuram.jpg',
+        wayanad: 'alapuzha.jpg',
+        guruvayoor: 'packages/PACKAGES/Guruvayoor/guruvayur-temple.jpg',
+        kannur: 'packages/PACKAGES/Kannur Temple Visit/mridanga saileswari.jpg'
+    };
 
-            const descriptions = {
-                munnar: 'Discover the sprawling tea plantations and mist-covered hills of Munnar.',
-                munnar_alleppey: 'The perfect blend of mist-covered hills and serene backwater houseboats.',
-                honeymoon: 'A romantic escapade featuring private pool villas and intimate beach dinners.',
-                south_india: 'Explore the spiritual grandeur of Palani, Madurai, and Rameshwaram.',
-                mookambika: 'A soul-enriching journey through the most sacred temples of Karnataka.',
-                nalambalam: 'A sacred circuit visit to the four temples dedicated to the brothers of Lord Rama.',
-                hyderabad: 'Explore Charminar, Golconda Fort, Ramoji Film City and Hyderabad culture.',
-                mysore: 'Visit Mysore Palace, Brindavan Gardens and Bangalore city attractions.',
-                ooty: 'Tea plantations, Ooty Lake, botanical gardens and hill station views.',
-                kodaikanal: 'Kodai Lake, Coaker’s Walk, waterfalls and misty mountains.',
-                navagraha: 'Explore the 9 sacred temples dedicated to the Navagrahas.',
-                trivandrum: 'Experience the cultural bliss of Kerala\'s capital city and Kovalam beach.',
-                wayanad: 'Explore the natural beauty of Wayanad with waterfalls, dams, and caves.',
-                guruvayoor: 'A spiritual pilgrimage to the famous Guruvayoor Temple and Anakkotta.',
-                kannur: 'Visit the revered temples and ancient shrines of Kannur district.'
-            };
+    const descriptions = {
+        munnar: 'Discover the sprawling tea plantations and mist-covered hills of Munnar.',
+        munnar_alleppey: 'The perfect blend of mist-covered hills and serene backwater houseboats.',
+        honeymoon: 'A romantic escapade featuring private pool villas and intimate beach dinners.',
+        south_india: 'Explore the spiritual grandeur of Palani, Madurai, and Rameshwaram.',
+        mookambika: 'A soul-enriching journey through the most sacred temples of Karnataka.',
+        nalambalam: 'A sacred circuit visit to the four temples dedicated to the brothers of Lord Rama.',
+        hyderabad: 'Explore Charminar, Golconda Fort, Ramoji Film City and Hyderabad culture.',
+        mysore: 'Visit Mysore Palace, Brindavan Gardens and Bangalore city attractions.',
+        ooty: 'Tea plantations, Ooty Lake, botanical gardens and hill station views.',
+        kodaikanal: 'Kodai Lake, Coaker’s Walk, waterfalls and misty mountains.',
+        navagraha: 'Explore the 9 sacred temples dedicated to the Navagrahas.',
+        trivandrum: 'Experience the cultural bliss of Kerala\'s capital city and Kovalam beach.',
+        wayanad: 'Explore the natural beauty of Wayanad with waterfalls, dams, and caves.',
+        guruvayoor: 'A spiritual pilgrimage to the famous Guruvayoor Temple and Anakkotta.',
+        kannur: 'Visit the revered temples and ancient shrines of Kannur district.'
+    };
 
-            const prices = {
-                munnar: 'From ₹12,500',
-                munnar_alleppey: 'From ₹18,900',
-                honeymoon: 'From ₹25,000',
-                south_india: 'From ₹14,000',
-                mookambika: 'On Request',
-                nalambalam: 'On Request',
-                hyderabad: 'From ₹15,500',
-                mysore: 'From ₹22,000',
-                ooty: 'From ₹12,000',
-                kodaikanal: 'From ₹14,500',
-                navagraha: 'On Request',
-                trivandrum: 'On Request',
-                wayanad: 'On Request',
-                guruvayoor: 'On Request',
-                kannur: 'On Request'
-            };
+    const prices = {
+        munnar: 'From ₹12,500',
+        munnar_alleppey: 'From ₹18,900',
+        honeymoon: 'From ₹25,000',
+        south_india: 'From ₹14,000',
+        mookambika: 'On Request',
+        nalambalam: 'On Request',
+        hyderabad: 'From ₹15,500',
+        mysore: 'From ₹22,000',
+        ooty: 'From ₹12,000',
+        kodaikanal: 'From ₹14,500',
+        navagraha: 'On Request',
+        trivandrum: 'On Request',
+        wayanad: 'On Request',
+        guruvayoor: 'On Request',
+        kannur: 'On Request'
+    };
 
-            const groupType = {
-                munnar: '2+ Persons',
-                munnar_alleppey: '2+ Persons',
-                honeymoon: 'Couple',
-                south_india: 'Family',
-                mookambika: 'Group',
-                nalambalam: 'Any',
-                hyderabad: '2+ Persons',
-                mysore: '2+ Persons',
-                ooty: 'Family',
-                kodaikanal: 'Couple',
-                navagraha: 'Family',
-                trivandrum: 'Family',
-                wayanad: 'Family',
-                guruvayoor: 'Any',
-                kannur: 'Family'
-            };
+    const groupType = {
+        munnar: '2+ Persons',
+        munnar_alleppey: '2+ Persons',
+        honeymoon: 'Couple',
+        south_india: 'Family',
+        mookambika: 'Group',
+        nalambalam: 'Any',
+        hyderabad: '2+ Persons',
+        mysore: '2+ Persons',
+        ooty: 'Family',
+        kodaikanal: 'Couple',
+        navagraha: 'Family',
+        trivandrum: 'Family',
+        wayanad: 'Family',
+        guruvayoor: 'Any',
+        kannur: 'Family'
+    };
 
-            function renderHomePackages() {
-                if (!window.packageData || !grid) {
-                    setTimeout(renderHomePackages, 100);
-                    return;
-                }
-                let html = '';
-                for (let id in packageData) {
-                    const pkg = packageData[id];
-                    let days = pkg.itinerary.length + ' Days';
-                    if (id === 'mookambika') days = 'Customizable';
-                    if (id === 'nalambalam' || id === 'guruvayoor') days = '1 Day';
+    function renderHomePackages() {
+        if (!window.packageData || !grid) {
+            setTimeout(renderHomePackages, 100);
+            return;
+        }
+        let html = '';
+        for (let id in packageData) {
+            const pkg = packageData[id];
+            let days = pkg.itinerary.length + ' Days';
+            if (id === 'mookambika') days = 'Customizable';
+            if (id === 'nalambalam' || id === 'guruvayoor') days = '1 Day';
 
-                    let displayTitle = pkg.title.replace(/\([^)]*\)/g, '').trim();
+            let displayTitle = pkg.title.replace(/\([^)]*\)/g, '').trim();
 
-                    html += `
+            html += `
                     
                     
                     <div class="package-card-lux" data-id="${id}" tabindex="0" aria-label="${displayTitle} Package">
@@ -146,58 +146,57 @@
 
 
                     `;
+        }
+
+        grid.innerHTML = html;
+
+        grid.querySelectorAll('.package-card-lux').forEach(card => {
+            const btn = card.querySelector('.view-itinerary-btn');
+
+            const toggleCard = (c, b) => {
+                c.classList.toggle('expanded');
+                const isExpanded = c.classList.contains('expanded');
+                b.setAttribute('aria-expanded', isExpanded);
+                const icon = c.querySelector('i.fa-chevron-down, i.fa-chevron-up');
+                if (icon) {
+                    icon.classList.toggle('fa-chevron-down', !isExpanded);
+                    icon.classList.toggle('fa-chevron-up', isExpanded);
                 }
+            };
 
-                grid.innerHTML = html;
-
-                grid.querySelectorAll('.package-card-lux').forEach(card => {
-                    const btn = card.querySelector('.view-itinerary-btn');
-
-                    const toggleCard = (c, b) => {
-                        c.classList.toggle('expanded');
-                        const isExpanded = c.classList.contains('expanded');
-                        b.setAttribute('aria-expanded', isExpanded);
-                        const icon = c.querySelector('i.fa-chevron-down, i.fa-chevron-up');
-                        if (icon) {
-                            icon.classList.toggle('fa-chevron-down', !isExpanded);
-                            icon.classList.toggle('fa-chevron-up', isExpanded);
-                        }
-                    };
-
-                    if (btn) {
-                        btn.addEventListener('click', (e) => {
-                            e.stopPropagation();
-                            toggleCard(card, btn);
-                        });
-                        btn.addEventListener('keydown', (e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                toggleCard(card, btn);
-                            }
-                        });
+            if (btn) {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleCard(card, btn);
+                });
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleCard(card, btn);
                     }
                 });
-
-
-
-                if (window.gsap && window.ScrollTrigger) {
-                    setTimeout(() => {
-                        ScrollTrigger.refresh();
-                        gsap.from('#home-packages-grid .package-card-lux', {
-                            scrollTrigger: {
-                                trigger: '.packages-premium',
-                                start: "top 80%",
-                            },
-                            y: 80,
-                            opacity: 0,
-                            duration: 0.8,
-                            stagger: 0.15,
-                            ease: "power4.out"
-                        });
-                    }, 100);
-                }
             }
-            renderHomePackages();
         });
-    
+
+
+
+        if (window.gsap && window.ScrollTrigger) {
+            setTimeout(() => {
+                ScrollTrigger.refresh();
+                gsap.from('#home-packages-grid .package-card-lux', {
+                    scrollTrigger: {
+                        trigger: '.packages-premium',
+                        start: "top 80%",
+                    },
+                    y: 80,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power4.out"
+                });
+            }, 100);
+        }
+    }
+    renderHomePackages();
+});
