@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | Nightingale Holidays</title>
+    <meta name="description" content="Read customer reviews and see what travelers say about Nightingale Holidays.">
+    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="reviews.css?v=10">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="reviews-page">
+    <!-- Header -->
+    <header class="scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Nightingale Holidays">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#destinations">Travels</a></li>
+                    <li><a href="reviews.html" class="nav-highlight">Reviews</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-socials">
+                <a href="https://www.facebook.com/share/1DfszVZ6SN/" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/919048099499" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/nightingale.holidayss?utm_source=qr&igsh=OWQwYjJ4cXR3b3ps"
+                    target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Customer Reviews Hero Section -->
+        <section class="reviews-hero-modern">
+            <div class="container">
+                <h1 class="reviews-title">Customer Reviews</h1>
+                <div class="rating-summary">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="rating-text">
+                        <strong>5.0 / 5.0 Rating</strong><br>
+                        Based on 100+ Reviews
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid Section -->
+        <section class="bento-section">
+            <div class="bento-grid">
+
+                <!-- Card 1 (Anjali) -->
+                <div class="bento-card card-1 gsap-card">
+                    <div class="quote-icon quote-top-left">“</div>
+                    <div class="avatar-circle avatar-right-overlap bg-purple">A</div>
+                    <div class="b-text">
+                        Wonderful service from start to finish. Our Munnar trip was perfectly organized and deeply
+                        relaxing.
+                    </div>
+                    <div class="b-author">Anjali Nair <span>Verified Traveler</span></div>
+                </div>
+
+                <!-- Card 2 (Arun) -->
+                <div class="bento-card card-2 gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-orange">A</div>
+                    <div class="b-stars center">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="b-title">I really appreciate!!</div>
+                    <div class="b-text">
+                        Best travel agency in Kerala. Temple tour was smooth and comfortable. Every detail was planned
+                        meticulously.
+                    </div>
+                    <div class="b-author">Arun Kumar <span>@arunkumar</span></div>
+                    <div class="quote-icon quote-bottom-right">“</div>
+                </div>
+
+                <!-- Card 3 (Priya) -->
+                <div class="bento-card card-3 gsap-card">
+                    <div class="card-image-wrapper">
+                        <img src="pine.jpg" onerror="this.src='home.jpg';" alt="Kerala Journey">
+                    </div>
+                    <div class="card-3-content">
+                        <div class="b-text">
+                            "Highly professional team. Houseboat experience was unforgettable and the scenery was
+                            breathtaking."
+                        </div>
+                        <div class="b-author">Priya Thomas <span>Premium Client</span></div>
+                    </div>
+                </div>
+
+                <!-- Card 4 (Mohammed) -->
+                <div class="bento-card card-4 gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-blue" style="background-image: url('kodai.jpg');">
+                    </div>
+                    <div class="b-title">Good Job!</div>
+                    <div class="b-stars center">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="b-text">
+                        Excellent coordination and safe journey. Will absolutely book again for our next holiday.
+                    </div>
+                </div>
+
+                <!-- Card 5 (Riya) -->
+                <div class="bento-card card-5 gsap-card">
+                    <div class="avatar-circle avatar-right-overlap bg-red">R</div>
+                    <div class="b-title">Beyond Expectations</div>
+                    <div class="b-text">
+                        Luxury honeymoon package was beyond expectations. From the resorts to the private guides,
+                        everything was top-tier.
+                    </div>
+                    <div class="b-author">Riya Menon <span>Verified Traveler</span></div>
+                </div>
+
+                <!-- Card 10 (Suresh) NEW -->
+                <div class="bento-card card-10 gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-teal">S</div>
+                    <div class="b-stars center">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="b-title">Flawless Planning</div>
+                    <div class="b-text">
+                        I cannot express how perfect the whole corporate team retreat was. They are absolutely the best
+                        in the market.
+                    </div>
+                    <div class="b-author">Suresh K. <span>@suresh_k</span></div>
+                    <div class="quote-icon quote-bottom-right">“</div>
+                </div>
+
+                <!-- Card 11 (Vani) NEW -->
+                <div class="bento-card card-11 gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-orange">V</div>
+                    <div class="b-text">
+                        "If you are looking for premium luxury in south India, this is it. Absolute elegance and care in
+                        every detail."
+                    </div>
+                    <div class="b-author" style="margin-top: 20px;">Vani Roy <span>Premium Client</span></div>
+                </div>
+
+                <!-- Card 6 (Sneha) -->
+                <div class="bento-card card-6 gsap-card">
+                    <div class="side-image"></div>
+                    <div class="card-6-content">
+                        <div class="quote-icon"
+                            style="position: relative; top: -10px; left: -10px; font-size: 3rem; color: #ffcc33;">“
+                        </div>
+                        <div class="b-text">
+                            The team went above and beyond for our anniversary trip to Wayanad. Highly recommended!
+                        </div>
+                        <div class="b-author">Sneha Varghese <span>@sneha_travels</span></div>
+                    </div>
+                </div>
+
+                <!-- Card 7 (David) -->
+                <div class="bento-card card-7 gsap-card">
+                    <div class="b-title">I was very impressed!</div>
+                    <div class="b-text" style="max-width: 80%; margin: 0 auto;">
+                        A truly premium experience. The personalized itinerary made our family vacation stress-free and
+                        purely enjoyable.
+                    </div>
+                    <div class="b-author" style="margin-top: 15px;">David John</div>
+
+                    <div class="multi-avatars">
+                        <div class="avatar-circle bg-teal">D</div>
+                        <div class="avatar-circle bg-dark" style="background-image: url('travel2.jpeg');"></div>
+                        <div class="avatar-circle bg-pink">M</div>
+                    </div>
+                </div>
+
+                <!-- Card 8 (Karthik) -->
+                <div class="bento-card card-8 speech-bubble gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-green">K</div>
+                    <div class="b-stars center">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="b-text">
+                        Beautiful properties and very polite drivers. They took care of every little detail during our
+                        South India temple run.
+                    </div>
+                    <div class="b-author">Karthik Raj <span>Customer</span></div>
+                </div>
+
+                <!-- Card 9 (Aishwarya) -->
+                <div class="bento-card card-9 gsap-card">
+                    <div class="b-text">
+                        "Perfect arrangements. The luxury houseboat was a dream. Highly recommend Nightingale!"
+                    </div>
+                    <div class="b-author">Aishwarya <span>Verified Traveler</span></div>
+                    <div class="avatar-circle avatar-bottom-right bg-dark">A</div>
+                </div>
+
+            </div>
+
+            <div class="bento-grid" style="margin-top: 50px;">
+                <!-- NEW GRID -->
+
+                <!-- Card 1 -->
+                <div class="bento-card card-1 gsap-card">
+                    <div class="quote-icon quote-top-left">“</div>
+                    <div class="avatar-circle avatar-right-overlap bg-red">H</div>
+                    <div class="b-text">
+                        The entire 10-day trip through Kerala was stunning. We were extremely happy with the luxurious
+                        stays!
+                    </div>
+                    <div class="b-author">Hari Prasad <span>Verified Traveler</span></div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bento-card card-2 gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-teal">S</div>
+                    <div class="b-stars center">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="b-title">Flawless Planning</div>
+                    <div class="b-text">
+                        I cannot express how perfect the whole corporate team retreat was. They are absolutely the best
+                        in the market.
+                    </div>
+                    <div class="b-author">Sanjay Kumar <span>@sanjay_kumar</span></div>
+                    <div class="quote-icon quote-bottom-right">“</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bento-card card-3 gsap-card" style="padding: 30px; justify-content: center;">
+                    <div class="avatar-circle avatar-top-center bg-orange" style="top: -30px;">V</div>
+                    <div class="b-text">
+                        "If you are looking for premium luxury in south India, this is it. Absolute elegance and care in
+                        every detail."
+                    </div>
+                    <div class="b-author" style="margin-top: 20px;">Vinita Roy <span>Premium Client</span></div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bento-card card-4 gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-pink">F</div>
+                    <div class="b-title">Loved It!</div>
+                    <div class="b-stars center">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="b-text">
+                        First time in India and they made us feel incredibly safe. Highly recommend their bespoke
+                        packages!
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bento-card card-5 gsap-card">
+                    <div class="avatar-circle avatar-right-overlap bg-blue">R</div>
+                    <div class="b-title">Affordable Luxury</div>
+                    <div class="b-text">
+                        Top-notch resorts for a very cost-effective price point. Unbelievable value for the memories we
+                        made.
+                    </div>
+                    <div class="b-author">Rajesh K. <span>Verified Traveler</span></div>
+                </div>
+
+                <!-- Card 10 (Emily) NEW -->
+                <div class="bento-card card-10 gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-purple">E</div>
+                    <div class="b-stars center">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="b-title">Wonderful Safari</div>
+                    <div class="b-text">
+                        The Periyar wildlife sanctuary was an absolute delight. We spotted so many exotic animals!
+                    </div>
+                    <div class="b-author">Emily R. <span>Traveler</span></div>
+                    <div class="quote-icon quote-bottom-right">“</div>
+                </div>
+
+                <!-- Card 11 (John) NEW -->
+                <div class="bento-card card-11 gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-green">J</div>
+                    <div class="b-text">
+                        "They organized a wonderful backwater cruise. The food was so delicious!"
+                    </div>
+                    <div class="b-author" style="margin-top: 20px;">John D. <span>Premium Client</span></div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bento-card card-6 gsap-card" style="display: block; padding: 30px;">
+                    <div class="quote-icon quote-top-left"
+                        style="font-size: 4rem; color: #fbbc04; top: 10px; left: 15px; z-index: 0; opacity: 0.2;">“
+                    </div>
+                    <div style="position: relative; z-index: 1;">
+                        <div class="b-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="b-text" style="font-size: 1.1rem; margin-top: 15px;">
+                            We booked an international trip to Dubai through them and it was seamlessly executed!
+                        </div>
+                        <div class="b-author" style="margin-top: 20px;">Nithin V. <span>@nithin_v</span></div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="bento-card card-7 gsap-card">
+                    <div class="b-title">A Masterpiece Journey</div>
+                    <div class="b-text" style="max-width: 80%; margin: 0 auto;">
+                        Every single transfer was on time, the drivers were polite and knew all the local hidden gems. A
+                        truly 5-star experience.
+                    </div>
+                    <div class="b-author" style="margin-top: 15px;">Sarah Williams</div>
+
+                    <div class="multi-avatars">
+                        <div class="avatar-circle bg-red">S</div>
+                        <div class="avatar-circle bg-purple">E</div>
+                        <div class="avatar-circle bg-green">T</div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="bento-card card-8 speech-bubble gsap-card">
+                    <div class="avatar-circle avatar-top-center bg-dark">A</div>
+                    <div class="b-stars center">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="b-text">
+                        The houseboat in Alleppey they booked for us was out of this world. Super premium!
+                    </div>
+                    <div class="b-author">Akhil Jose <span>Customer</span></div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="bento-card card-9 gsap-card">
+                    <div class="b-text">
+                        "Simply the best travel service provider for God's Own Country. No competition!"
+                    </div>
+                    <div class="b-author">Meera K. <span>Verified Traveler</span></div>
+                    <div class="avatar-circle avatar-bottom-right bg-orange">M</div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <h3>Nightingale Holidays</h3>
+                    <p>Curating extraordinary journeys and redefining luxury travel.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/nightingale.holidayss?utm_source=qr&igsh=OWQwYjJ4cXR3b3ps"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1DfszVZ6SN/" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/919048099499" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Navigation -->
+                <div class="footer-info">
+                    <h4>Collections</h4>
+                    <p><a href="index.html#home">Home</a></p>
+                    <p><a href="index.html#about">Our Story</a></p>
+                    <p><a href="index.html#destinations">Worldwide</a></p>
+                    <p><a href="index.html#packages">Tour Packages</a></p>
+                    <p><a href="reviews.html">Customer Reviews</a></p>
+                </div>
+                <!-- Col 3: Offices -->
+                <div class="footer-info">
+                    <h4>Our Offices</h4>
+                    <p><strong>Calicut:</strong> Mankavu, Kozhikode</p>
+                    <p><strong>Kannur:</strong> Mattanur, Kannur</p>
+                    <p><strong>Operational:</strong> 24/7 Concierge</p>
+                </div>
+                <!-- Col 4: Contact -->
+                <div class="footer-info">
+                    <h4>Direct Contact</h4>
+                    <p>+91 9847068334</p>
+                    <p>+91 9048099499</p>
+                    <p><a href="mailto:nightingaleholidays4u@gmail.com"
+                            style="color: inherit; text-decoration: none;">nightingaleholidays4u@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nightingale Holidays. All rights reserved.</p>
+                <div class="developer-credit">
+                    <a href="https://www.instagram.com/intellex.web?igsh=MXc4Z2Uwd243OHpqdA%3D%3D&utm_source=qr"
+                        target="_blank"
+                        style="color: #ffffff; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#ffcc33'" onmouseout="this.style.color='#ffffff'">
+                        MEET THE DEVELOPERS <i class="fab fa-instagram" style="font-size: 1.1rem;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919048099499?text=Hello%20Nightingale%20Holidays%2C%20I'm%20interested%20in%20your%20luxury%20services."
+        class="whatsapp-float" target="_blank"
+        style="position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js?v=10"></script>
+</body>
+
+</html>
